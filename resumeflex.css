@@ -1,0 +1,15 @@
+.container {
+    height: 100px;
+    width: 20%;
+    background-color: aqua;
+    color: white;
+    font-size: 30px;
+
+}
+
+.main container {
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+        
+}
