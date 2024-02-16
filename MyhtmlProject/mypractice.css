@@ -1,0 +1,35 @@
+.threein- one {
+    display: inline;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-box {
+    display: block;
+    height: 400px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float:left;
+    border-style: dotted;
+    color:whitesmoke;
+}
+.second-box{display: block;
+    height: 400px;
+    width: 300px;
+margin-left: 30px;
+margin-right: 30px;
+margin-top: 20px;
+float: left;
+border-style: dotted;
+color: azure;}
+
+.third-box{height: 400px;
+width: 300px;
+float: left;
+border-style:dotted ;
+margin-left: 20px;
+margin-right: 20px;
+margin-top: 20px;
+color: azure;}

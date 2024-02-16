@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- internal style -->
+    <style>
+        .container {
+            height: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+
+        }
+    
+
+        .leftcontainer {
+            height: 600px;
+            width: 50%;
+            background-color: green;
+        }
+
+        .rightcontainer {
+            height: 200px;
+            width: 50%;
+        }
+
+        .topbox {
+            background-color: aqua;
+        }
+
+        .middlebox {
+            background-color: blueviolet;
+        }
+
+        .bottombox {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="container">
+        <!-- left container -->
+        <div class="leftcontainer"> <video controls src="sample-5s.mp4" height="600px" width="100%"></video></div>
+        <!-- right container -->
+        <div class="rightcontainer">
+            <!-- top box -->
+            <div class="rightcontainer topbox"> <video controls src="sample-5s.mp4" width="100%" height="100%"></video></div>
+            <!-- middle box -->
+            <div class="rightcontainer middlebox"> <video controls src="sample-5s.mp4" width="100%" height="200px"></video></div>
+            <!-- bottom box -->
+            <div class="rightcontainer bottombox"> <video controls src="sample-5s.mp4" width="100%" height="200px"></video></div>
+        </div>
+    </div>
+</body>
+
+</html>
