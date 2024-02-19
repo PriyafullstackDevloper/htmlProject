@@ -1,0 +1,61 @@
+/* styling for main box */
+.main {
+    background-color: aliceblue;
+    height: 1200px;
+    width: 80%;
+    border-style: solid;
+    margin-left: 10%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* styling for 1st row */
+.firstrow {
+    background-color: black;
+    background-image: url(https://png.pngtree.com/background/20211215/original/pngtree-blue-smart-technology-hd-background-picture-image_1495898.jpg);
+}
+
+/* styling for 1st row */
+
+.firstbox {
+    background-color: white;
+    height: 80%;
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    padding: 3%;
+}
+
+/* styling for 2nd row */
+.secondrow {
+    background-color: floralwhite;
+    background-color: blue ;}
+
+.secondbox {
+    height: 80%;
+    width: 40%;
+    background-color: orangered;
+    margin-top: 25px;
+    float: right;
+    margin-right: 10%;
+
+    
+}
+.internalbox {padding: 20px; font-family: serif;}
+.secondinternalbox { padding: 20px; font-family: serif;}
+
+/* styling for 3rd row */
+.thirdrow {
+    background-color: pink;
+    background-image: url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg&ga=GA1.1.1530676663.1706707237&semt=ais);
+}
+.thirdbox {height: 80%; width: 50%; margin-left: 5%; margin-top: 3%; background-color: orangered;}
+
+/* styling for image */
+.images {
+    height: 90%;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
