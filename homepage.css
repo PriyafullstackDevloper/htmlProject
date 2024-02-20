@@ -13,6 +13,36 @@
 .firstrow {
     background-color: black;
     background-image: url(https://png.pngtree.com/background/20211215/original/pngtree-blue-smart-technology-hd-background-picture-image_1495898.jpg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* styling for 2nd box */
+
+.secondbox {
+    color: #2D9596;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.form-project {
+    background-color: #2D9596;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border-style: groove;
+    border-color: black;
+    font-family: serif;
+
+}
+
+.youtube-page {
+    background-color: #9195F6;
+    color: black;
+    padding: 10px;
+    border-style: groove;
+    border-color: black;
+    font-family: serif;
 }
 
 /* styling for 1st row */
@@ -20,37 +50,55 @@
 .firstbox {
     background-color: white;
     height: 80%;
-    width: 30%;
-    margin-left: 10%;
+    width: 70%;
+    margin-left: 5%;
     margin-top: 3%;
     margin-bottom: 10%;
     padding: 3%;
+    background-image: url(https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_1280.jpg);
 }
 
 /* styling for 2nd row */
 .secondrow {
-    background-color: floralwhite;
-    background-color: blue ;}
-
-.secondbox {
-    height: 80%;
-    width: 40%;
-    background-color: orangered;
-    margin-top: 25px;
-    float: right;
-    margin-right: 10%;
-
-    
+    background-color: #9195F6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-style: groove;
+    border-color: black;
 }
-.internalbox {padding: 20px; font-family: serif;}
-.secondinternalbox { padding: 20px; font-family: serif;}
 
-/* styling for 3rd row */
-.thirdrow {
-    background-color: pink;
-    background-image: url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg&ga=GA1.1.1530676663.1706707237&semt=ais);
+/* styling for second row 3 column */
+.first-col {
+    font-family: serif;
+    background-color: #9195F6;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border-style: groove;
+    border-color: black;
 }
-.thirdbox {height: 80%; width: 50%; margin-left: 5%; margin-top: 3%; background-color: orangered;}
+
+.second-col {
+    font-family: serif;
+    background-color: #9195F6;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+}
+
+.third-col {
+    font-family: serif;
+    background-color: #9195F6;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border-style: groove;
+    border-color: black;
+}
+
+.thirdbox {
+    background-color: pink
+}
 
 /* styling for image */
 .images {
