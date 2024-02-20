@@ -12,7 +12,7 @@
 /* styling for 1st row */
 .firstrow {
     background-color: black;
-    background-image: url(https://png.pngtree.com/background/20211215/original/pngtree-blue-smart-technology-hd-background-picture-image_1495898.jpg);
+    background-image: url(https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsb2ZmaWNlMThfZGlnaXRhbF9hYnN0cmFjdF9saW5lX2FydF9lbWl0dGVyX2JsdWVfbGlnaHRfZF9iZTYzZmU2Yi02YTc3LTRlMjctOGQ1Ni0xZWFiMGViOWU0MjFfMS5qcGc.jpg);
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -76,6 +76,7 @@
     padding: 10px;
     border-style: groove;
     border-color: black;
+    font-size: 25px;
 }
 
 .second-col {
@@ -84,6 +85,7 @@
     font-size: 20px;
     color: black;
     padding: 10px;
+    font-size: 25px;
 }
 
 .third-col {
@@ -94,6 +96,7 @@
     padding: 10px;
     border-style: groove;
     border-color: black;
+    font-size: 25px;
 }
 
 .thirdbox {
