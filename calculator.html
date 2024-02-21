@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* styling for main */
+        .main {
+            background-color: gray;
+            height:40vw;
+            width: 40vw;
+            display: grid;
+            grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+            border-style: solid;
+            border-color: black ;
+        }
+
+        .gray {
+            background-color: gray;
+            border-style: solid;
+            border-color: white;
+
+        }
+
+        .yellow {
+            background-color: orange;
+            border-style: solid;
+            border-color: white;
+        }
+
+        .row {
+            background-color: gray;
+            border-style: solid;
+            border-color: black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+
+        .lastrow {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            color: gray;
+            border-style: solid;
+            border-color: white;
+        }
+        .display {background-color: black;}
+    </style>
+
+</head>
+
+<body>
+    <!-- styling for main -->
+    <div class="main">
+        <!-- 1st row -->
+        <div class="display"></div>
+        <!-- 2nd row  -->
+        <div class="row">
+        <div class="gray">AC</div>
+        <div class="gray">+/-</div>
+        <div class="gray">%</div>
+        <div class="yellow">/</div>
+    </div>
+
+        <!-- 3rd row -->
+        <div class="row">
+        <div class="gray">7</div>
+        <div class="gray">8</div>
+        <div class="gray">9</div>
+        <div class="yellow">*</div>
+    </div>
+
+        <!-- 4th row -->
+        <div class="row">
+        <div class="gray">4</div>
+        <div class="gray">5</div>
+        <div class="gray">6</div>
+        <div class="yellow">-</div>
+    </div>
+
+        <!-- 5th row -->
+        <div class="row">
+        <div class="gray">1</div>
+        <div class="gray">2</div>
+        <div class="gray">3</div>
+        <div class="yellow">+</div>
+    </div>
+
+        <!-- 6th row -- -->
+        <div class="lastrow">
+        <div class="lastrow">0</div>
+        <div class="gray">1</div>
+        <div class="yellow">=</div>
+    </div>
+
+    
+    </div>

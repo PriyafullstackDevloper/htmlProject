@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main {
+            background-color: gray;
+            height: 50vh;
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first-row {
+            background-color: black;
+            height: 25%;
+            width: 100%;
+        }
+
+        .all-row {
+            background-color: gray;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            border-style: groove;
+            border-color: black;
+        }
+
+        .gray {
+            background-color: gray;
+            border-style: solid black;
+        }
+        .yellow {background-color: yellow;
+        border-style: solid black;}
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="first-row"></div>
+        <!-- by grid 5rows -->
+        <div class="all-row">
+            <div class="gray"></div>
+            <div class="gray"></div>
+            <div class="gray"></div>
+            <div class="yellow"></div>
+        </div>
+        <div class="all-row"></div>
+        <div class="all-row"></div>
+        <div class="all-row"></div>
+    </div>
+</body>
+
+</html>
