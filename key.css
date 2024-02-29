@@ -123,5 +123,6 @@ button {
     border-radius: 30px;
     border-color: silver;
     background-image: url(./assets/display.png);
+    background-repeat: no-repeat;
 
 }
