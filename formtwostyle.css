@@ -1,10 +1,20 @@
-.form-2{background-color: #436850;
-height: 40%; width: 700px;
-float: 30px;
-padding: 20px;
-margin-left: 300px;
-margin-top: 100px; color: #FFFFFF;
+/* main */
+.form-2 {
+    background-color: #436850;
+    height: 40%;
+    width: 700px;
+    float: 30px;
+    padding: 20px;
+    margin-left: 300px;
+    margin-top: 100px;
+    color: #FFFFFF;
 }
+/* head */
+.text-style {
+    font-size: 40px;
+}
+/* background image */
 
-.text-style{font-size: 40px;}
-body{background-image: url(https://img.freepik.com/free-vector/flat-geometric-background_23-2148957211.jpg?w=1480&t=st=1706875210~exp=1706875810~hmac=b92f893b647f656f5449e998f6c6e2705d41cbcd5527cc7fe3928f6e5f72ab56);}
+body {
+    background-image: url(https://img.freepik.com/free-vector/flat-geometric-background_23-2148957211.jpg?w=1480&t=st=1706875210~exp=1706875810~hmac=b92f893b647f656f5449e998f6c6e2705d41cbcd5527cc7fe3928f6e5f72ab56);
+}
