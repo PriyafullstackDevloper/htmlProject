@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* main */
+        .main {
+            height: 50vw;
+            width: 70vw;
+            background-color: aqua;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        /* first row */
+
+        .firstrow {
+            background-color: blue;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+        /* 1st row 1 column */
+
+        .firstcolumn {
+            background-color: yellow;
+        }
+/* 1st row 2nd column */
+        .secondcolumn {
+            background-color: aqua;
+        }
+/* 2nd row */
+
+        .secondrow {
+            background-color: green;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .topcolumn {
+            background-color: red;
+        }
+
+        .middlecolumn {
+            background-color: bisque;
+        }
+
+        .lastcolumn {
+            background-color: black;
+        }
+/* 3rd row */
+        .thirdrow {
+            background-color: gray;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+        /* 3rd 1 */
+
+        .thirdone { background-color: palevioletred;}
+        /* 3rd 2 */
+
+        .thirdsecond { background-color: olive ;}
+    </style>
+
+</head>
+<!-- for page -->
+
+<body style="padding: 0; margin: 0;">
+    <!-- main -->
+    <div class="main">
+        <!-- 1st row    -->
+        <div class="firstrow">
+            <div class="firstcolumn"></div>
+            <div class="secondcolumn"></div>
+        </div>
+        <!-- 2nd row -->
+        <div class="secondrow">
+            <div class="topcolumn"></div>
+            <div class="middlecolumn"></div>
+            <div class="lastcolumn"></div>
+        </div>
+        <!-- 3rd row -->
+        <div class="thirdrow">
+            <div class="thirdone"></div>
+            <div class="thirdsecond"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

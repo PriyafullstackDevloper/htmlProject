@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+         .main-container {display: flex;
+            gap: 20px;
+            flex-direction: column;
+            background-color: gray;
+            height: 700px;
+            width: 100%;
+            align-items: center;
+            
+        }
+
+        .inner-container {
+            height: 30%;
+            width: 30%; display: flex;
+            align-self: flex-start;
+
+        }
+
+        .firstbox {
+            background-color: red; 
+        }
+
+        .secondbox {
+    background-color: green;height: 30%; width: 30%;
+        }
+
+        .thirdbox {
+            background-color: blue; height: 30%; width: 30%; display: flex;
+            align-self: flex-end;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="main-container">
+ <!-- first container -->
+        <div class="inner-container firstbox"></div>
+        <!-- second container -->
+        <div class="secondbox"></div>
+        <!-- third container -->
+        <div class="thirdbox"></div>
+    
+    </div>
+</body>
+
+</html>

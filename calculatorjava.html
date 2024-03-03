@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* styling for main */
+        .main {
+            background-color: gray;
+            height: 60vh;
+            width: 40vw;
+            display: grid;
+            grid-template-columns: 1fr;
+            border-style: solid;
+            border-color: black;
+            margin-left: 20%;
+            margin-top: 7;
+        }
+
+        .gray {
+            background-color: gray;
+
+
+
+
+        }
+
+        .yellow {
+            background-color: orange;
+            font-size: 40px;
+            color: white;
+
+        }
+
+        .row {
+            background-color: gray;
+            border-style: solid;
+            border-color: black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            height: 36vh;
+            width: 40vw;
+            border-radius: 10px;
+            font-size: 90px;
+
+
+
+
+        }
+
+        .lastrow {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            color: black;
+            border-style: solid black;
+
+            height: 9vh;
+            width: 100%;
+        }
+
+        .displayone {
+            background-color: black;
+            height: 15vh;
+            width: 100%;
+
+        }
+
+        button {
+            height: 100%;
+            width: 100%;
+
+            background-color: gray;
+            font-size: 30px;
+            color: white;
+
+
+        }
+
+        #display {
+            height: 60%;
+            width: 90%;
+            background-color: aqua;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+
+    
+    function clearFunction(){
+        document.getElementById("display").innerHTML = "00";
+    }
+   
+
+    
+
+    </script>
+
+</head>
+
+<body>
+    <!-- styling for main -->
+    <div class="main">
+        <!-- 1st row -->
+        <div class="displayone">
+            <h1 id="display"></h1>
+        </div>
+        <!-- 2nd row  -->
+        <div class="row">
+            <button class="button" type="submit" onclick="clearFunction()">AC</button>
+          <button class="button">+/-</button>
+            <button class="button">%<div class="gray"></button>
+            <button class="yellow">/</button>
+
+            <!-- 3rd row -->
+
+            <button class="button">
+        <div class="gray" onclick="numberTyped(7)">7</div></button>
+            <button class="button"  onclick="numberTyped(8)>8</button>
+            <button class="button">
+                <div class="gray">9</div>
+            </button>
+            <button class="yellow">
+                <div class="yellow">*</div>
+            </button>
+
+            <!-- 4th row -->
+            <button class="button">
+                <div class="gray">4</div>
+            </button>
+            <button class="button">
+                <div class="gray">5</div>
+            </button>
+            <button class="button">
+                <div class="gray">6</div>
+            </button>
+            <button class="yellow">
+                <div class="yellow">-</div>
+            </button>
+
+
+            <!-- 5th row -->
+
+            <button class="button">
+                <div class="gray">1</div>
+            </button>
+            <button class="button">
+                <div class="gray">2</div>
+            </button>
+            <button class="button">
+                <div class="gray">3</div>
+            </button>
+            <button class="yellow">
+                <div class="yellow">+</div>
+            </button>
+        </div>
+
+        <!-- 6th row -- -->
+        <div class="lastrow">
+            <button class="button">
+                <div class="lastrow">0</div>
+            </button>
+            <button class="button">
+                <div class="gray">.</div>
+            </button>
+            <button class="yellow">
+                <div class="yellow">=</div>
+            </button>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
 
     <title>Calculator</title>
     <style>
+        /* styling for main  */
         .main {
             background-color: gray;
             display: flex;
@@ -14,6 +15,7 @@
             margin-left: 15%;
             margin-top: 7%;
         }
+        /* 1st row  display one*/
 
         .first-row {
             background-color: black;
@@ -22,7 +24,7 @@
             border-radius: 30px;
             border-style: groove;
         }
-
+/* styling for 2nd to 5th row */
         .row {
             display: grid;
             grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -44,7 +46,7 @@
             border-radius: 30px;
             border-color: black;
         }
-
+/* last row */
         .last-row {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
@@ -55,7 +57,7 @@
             border-radius: 30px;
             border-color: black;
         }
-
+/* button */
         button {
             height: 100%;
             width: 100%;
@@ -65,12 +67,8 @@
         border-radius: 30px;
         border-style: 2px solid;
         font-size: 25px;
-            /* border-left: 10px; */
+    
         }
-
-        /* .button1 {
-            background-color: orange;
-        } */
 
         #display {
             background-color: lightblue;
@@ -164,6 +162,7 @@
             action = 3;
             document.getElementById("display").innerHTML = displayString;
         }
+        // div
         function div(){
             total = Number(displayString);
             displayString = "";

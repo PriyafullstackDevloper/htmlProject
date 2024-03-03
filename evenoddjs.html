@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* main */
+        .main {
+            background-color: pink;
+            height: 60vh;
+            width: 40vw;
+        }
+/* display show */
+        #display {
+            background-color: #9BB0C1;
+            height: 25%;
+            width: 80%;
+            border-radius: 25px;
+            margin-left: 20px;
+
+
+        }
+
+        .submit {
+            height: 60px;
+            width: 30%;
+            background-color: green;
+
+        }
+    </style>
+    <script>
+        let num;
+
+// check odd even
+        function checkoddEven() {
+            num = document.getElementById("evenodd").value;
+            if (num%2 ==0) {
+                document.getElementById("display").innerHTML = "The number is even";
+            } else  {
+                document.getElementById("display").innerHTML = "The number is odd";
+            }
+         }
+        //  check vote
+        let number;
+        function checkVote(){
+            number = document.getElementById("age").value;
+            if ( number >= 18){
+            document.getElementById("display").innerHTML = "Eligible for vote";}
+            else {
+                document.getElementById("display").innerHTML ="Not eligible for vote";
+            }
+        }
+
+
+        // check equal
+        function checkEqual() {
+            firstnum = document.getElementById("evenodd").value;
+            secondnum = document.getElementById("age").value;
+    
+            if (firstnum == secondnum){
+                document.getElementById("display").innerHTML = "Equal";
+            } else {
+                document.getElementById("display").innerHTML = "Inequal"
+            }
+
+        }
+        // clear
+        function clearfunction(){
+            document.getElementById("display").innerHTML = "";
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="main">
+        <h1 id="display"></h1>
+        <!-- input -->
+        <input type="text" value="" id="evenodd" 
+        style="background-color: #117bd2; height: 30px; width:20%;">
+        <input type="text" value="0" id="age" 
+        style="background-color: #117bd2; height: 30px; width: 20%;"><br><br>
+        <!-- button -->
+        <button class="submit" onclick="checkoddEven()">Check Even & Odd</button><br><br>
+        <button class="submit" onclick="checkVote()">Check vote</button><br><br>
+        <button class="submit" onclick="clearfunction()">Clear</button>
+        <button class="submit"  onclick="checkEqual()">Check equal</button>
+
+
+    </div>
+
+</body>
+
+</html>
