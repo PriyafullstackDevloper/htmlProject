@@ -1,3 +1,4 @@
+/* table head */
 .toptable {
   border-style: dashed;
   border-collapse: collapse;
@@ -10,7 +11,7 @@
 }
 
 
-
+/* 1st box */
 .onebox {
   background-color: #82CD47;
   height: 600px;
@@ -29,7 +30,7 @@ form {
   color: aqua;
   text-align: left;
 }
-
+/* table foot */
 .foot {
   background-color: #FFF6E9;
   padding: 20px;
