@@ -3,6 +3,7 @@
 
 <head>
     <style>
+        /* main */
         .main {
 
             height: 900px;
@@ -12,39 +13,52 @@
 
         }
 
+        /* 1st column */
         .firstbox {
             background-color: red;
         }
 
+        /* 2nd column */
         .secondbox {
             background-color: green;
             display: grid;
             grid-template-rows: 1fr 1fr 1fr;
         }
 
+        /* 2nd col 1st row */
+
         .firstrow {
             height: 300px;
-            width: 100%; background-color: aqua;
+            width: 100%;
+            background-color: aqua;
         }
+
+        /* 2nd col 2nd row */
 
         .secondrow {
             height: 300px;
-            width: 100%; background-color: pink;
-        } */
+            width: 100%;
+            background-color: pink;
+        }
+
+        */
     </style>
 
 </head>
 
 <body>
+    <!-- main -->
     <div class="main">
+        <!-- 1st column -->
         <div class="firstbox"></div>
+        <!-- 2nd column -->
         <div class="secondbox">
             <div class="firstrow"></div>
             <div class="secondrow"></div>
             <div class="third row"></div>
         </div>
 
-        
+
     </div>
 </body>
 
