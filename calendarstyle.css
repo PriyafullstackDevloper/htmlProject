@@ -1,3 +1,4 @@
+/* table head */
 .thead {
     border: solid;
     border-collapse: collapse;
@@ -6,29 +7,31 @@
     font-family: sans-serif;
     padding: 20px;
 }
-
+/* main */
 table {
     margin-top: 50px;
     font-size: 40px;
      margin-left: 20%;
 } 
+/* table head */
 
 caption {
     text-align: center;
     color: red;
     font-size: 30px;
 }
-
+/* table data */
 td {
     background-color: #EBD9B4;
     float: 20px;
     padding: 20px;
 }
+/* for holiday */
 
 .holiday {
     background-color: #944E63;
 }
-
+/* fo blank */
 .blank {
     background-color: #A6CF98;
 }
