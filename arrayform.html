@@ -17,10 +17,10 @@
 
         <div id="entry" class="entryform">
             <!-- button -->
-            <legend>
+           
                 <button class="button" onclick="entryFunction()">Entry</button>
                 <button class="button" onclick="listFunction()">List</button>
-            </legend>
+      
             <!-- form -->
             <form class="form" id="form">
                 <fieldset class="text-style">
@@ -28,23 +28,23 @@
                     <!-- h1 -->
                     <h1>STUDENT DETAILS</h1>
                     <!-- first section -->
-                    <label for="name">FIRST NAME;</label>
+                    <label for="name" id="first-name">FIRST NAME;</label>
                     <input type="text" id="input">
                     <br>
                     <br>
                     <!-- second section -->
-                    <label for="lastname">LASTNAME;</label>
+                    <label for="lastname" id="last-name">LASTNAME;</label>
                     <input type="text" id="input">
                     <br>
                     <br>
-                    <label for="gender">Gender;</label>
+                    <label for="gender" id="gender">Gender;</label>
                     <input type="radio" name="gender" value="male" id="input"> Male
                     <input type="radio" name="gender" value="female" id="input"> Female
                     <br>
                     <br>
 
                     <!-- qualification -->
-                    <label for="education">EDUCATION;</label>
+                    <label for="education" id="education">EDUCATION;</label>
 
 
                     <select>
@@ -60,33 +60,33 @@
                     </br>
 
                     <!-- contact -->
-                    <label for="contact number">CONTACT NO;</label>
+                    <label for="contact number" id="contact-no">CONTACT NO;</label>
                     <input type="number" value="0-10" id="input">
                     </br>
                     </br>
                     <!-- DOB -->
-                    <label for="birth">DATE OF BIRTH;</label>
-                    <input type="number" id="input">
+                    <label for="birth" id="dob">DATE OF BIRTH;</label>
+                    <input type="datetime-local" id="Test_DatetimeLocal">
                     </br>
                     </br>
 
                     <!-- address -->
-                    <label for="address">ADDRESS;</label>
+                    <label for="address" id="address">ADDRESS;</label>
                     <input type="text" id="input">
                     </br>
                     </br>
                     <!-- roll no -->
-                    <label for="roll no">ROLL NO;</label>
+                    <label for="roll no" id="roll-No">ROLL NO;</label>
                     <input type="number" id="input">
                     <br>
                     <br>
                     <!-- email -->
-                    <label for="pemail">Email:</label>
+                    <label for="pemail" id="email">Email:</label>
                     <input type="email" id="pemail">
                     <br>
                     <br>
                     <!-- age -->
-                    <label for="age">Age</label>
+                    <label for="age" id="age">Age</label>
                     <input type="number" value="1-80">
                     <label>
                         <br>
@@ -98,129 +98,49 @@
 </textarea>
 
                         <!-- submit -->
-                        <button type="submit" class="submit" onclick="addStudent()">SUBMIT</button>
+                        <button type="input" class="submit" onclick="inputData()" id="data">SUBMIT</button>
                 </fieldset>
             </form>
+
+        </div>
+
+        <!-- 2nd page -->
+        <div id="list">
+            <button class="button" onclick="entryFunction()">Entry</button>
+            <button class="button" onclick="listFunction()">List</button>
+            <table id="addData" class="table">
+                <caption>STUDENT DATA</caption>
+                <thead>
+d                <tr>
+                    <th>Student Name</th>
+                    <th>Last Name</th>
+                    <th>Roll No</th>
+                    <th>Address</th>
+                    <th>Contact no</th>
+                    <th>DOB</th>
+                    <th>Education</th>
+                    <th>Gender</th>
+
+
+                </tr>
+            </thead>
+             
+            <!-- table body -->
+            <tbody id="create-tablerow">
+                <tr>
+
+                </tr>
+            </tbody>
+
+              
+
         
-    </div>
+            </table>
+        </div>
 
-    <!-- 2nd page -->
-    <div id="list">
-        <button class="button" onclick="entryFunction()">Entry</button>
-        <button class="button" onclick="listFunction()">List</button>
-        <table id="addData" class="table">
-            <caption>STUDENT DATA</caption>
-            <tr>
-                <th>Student Name</th>
-                <th>Last Name</th>
-                <th>Roll No</th>
-                <th>Address</th>
-                <th>Contact no</th>
-                <th>DOB</th>
-                <th>Education</th>
-                <th>Gender</th>
+        <script src="arrayform.js">
 
-
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-
-
-
-        </table>
-    </div>
-
-    <script src="arrayform.js">
-
-    </script>
+        </script>
 
 </body>
 

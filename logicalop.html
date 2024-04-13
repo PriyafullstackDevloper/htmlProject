@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-container {
+            height: 90vh;
+            width: 70vw;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            margin-left: 15%;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+        }
+
+        .display-container {
+            height: 60%;
+            width: 100%;
+            background-color: #4CCD99;
+            border-radius: 40px;
+        }
+
+        .input-container {
+            height: 40%;
+            width: 100%;
+            background-color: gray;
+            border-radius: 40px;
+
+        }
+
+        .input-box {
+            height: 20%;
+            width: 80%;
+            background-color: white;
+            margin-left: 7%;
+            margin-right: 3%;
+        }
+
+        .buttons {
+            height: 24%;
+            width: 80%;
+            background-color: yellow;
+            margin-left: 7%;
+            margin-right: 3%;
+        }
+    </style>
+    <script>
+        //  function arithmaticExample(age){
+        //     let output = "FULL TICKET"
+        //    if(age <= 17)
+        //     {
+        //     output= "HALF TICKET";
+        //     } if (age > 70){
+        //         output = "HALF TICKET";
+
+        //    }
+        //      document.getElementById("display").innerHTML = output;
+        //  }
+
+
+        //  function arithmaticExample(age){
+        //     let output = "FULL TICKET";
+        //     if(age <= 17 || age > 70){
+        //         output = "HALF TICKET";
+        //     }
+        //  document.getElementById("display").innerHTML= output;
+        //  }
+
+
+
+
+
+     function arithmaticExample(dress, age) {
+         let output = "MOUNT SCHOOL";
+         if ((dress === "red" || dress === "yellow") && age < 14) {
+                output = "MOUNT CARMEL";
+            } else {
+                output = "INVALID";
+            }
+            document.getElementById("display").innerHTML = output;
+        }
+        
+
+
+    </script>
+  
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display-container" id="display"></div>
+        <div class="input-container">
+            <input type="number" class="input-box" id="dressColor">
+            <input type="number" class="input-box" id="dressColor">
+            <button class="buttons" onclick="arithmaticExample('red',12  )">CLICK ME</button>
+        </div>
+    </div>
+
+</body>
+
+</html> 

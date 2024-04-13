@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <title>ELECTRIC BILL</title>
+    <style>
+        /* Main container */
+        .main-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            background-color: #6AD4DD;        }
+
+        /* Input section */
+        .input-section {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        /* Button */
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* button:hover {
+            background-color: #0056b3;
+        } */
+
+        /* Display */
+        .display {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Caption */
+        caption {
+            margin-bottom: 10px;
+            font-weight: bold;
+        
+        }
+    </style>
+    <script>
+        function calculateBill() {
+            let units = (document.getElementById("number").value);
+            let days = (document.getElementById("day").value);
+            let bill;
+            if (units <= 50) {
+                bill = units * 1.5;
+                if (days > 10 && days < 20) {
+                    bill += 20;
+                } else if (days > 20) {
+                    bill += 40;
+                } else if (days > 25) {
+                    bill += 100;
+                } else if (days > 180) {
+                    bill = "Line cut";
+                }
+            } else if (units >= 51 && units <= 150) {
+                bill = (50 * 1.5) + (units - 50) * 2.5;
+                if (days > 10 && days < 20) {
+                    bill += 40;
+                } else if (days > 20) {
+                    bill += 60;
+                } else if (days > 25) {
+                    bill += 100;
+                } else if (days > 180) {
+                    bill = "Line cut";
+                }
+            } else if (units >= 151 && units <= 250) {
+                bill = (50 * 1.5) + (100 * 2.5) + (units - 150) * 3.5;
+                if (days > 25) {
+                    bill += 100;
+                } else if (days > 180) {
+                    bill = "Line cut";
+                }
+            } else if (units > 250) {
+                bill = (50 * 1.5) + (100 * 2.5) + (100 * 3.5) + (units - 250) * 5;
+                if (days > 180) {
+                    bill = "Fine of 2000 RS and supply cut";
+                }
+            }
+            document.getElementById("display").innerHTML = "THE BILL IS=" + bill;
+        }
+    </script>
+
+</head>
+
+
+
+       
+<body>
+            <!-- main container -->
+            <div class="main-container">
+                <!-- display -->
+                <div class="display" id="display"></div>
+                <p>ENTER UNITS CONSUMED:</p>
+                <input class="input-section" type="number" id="number">
+                <p>LATE PAYABLE BILL (IF ANY):</p>
+                <input class="input-section" type="number" id="day">
+                <button onclick="calculateBill()">CALCULATE BILL</button>
+                <br>
+                <!-- Table for Charges Information -->
+                <table>
+                    <caption>CHARGES INFORMATION</caption>
+                    <tr>
+                        <th>RANGE IN UNITS</th>
+                        <th>RATE PER UNIT (Rs)</th>
+                        <th>SURPLUS CHARGES IN PERCENTAGE</th>
+                        <th>LATE FEES (IN Rs)</th>
+                    </tr>
+                    <tr>
+                        <td>0-50</td>
+                        <td>1.5</td>
+                        <td>NO SURPLUS CHARGES</td>
+                        <td>MORE THAN 10 DAYS: Rs 20</td>
+                    </tr>
+                    <tr>
+                        <td>51-150</td>
+                        <td>2.5</td>
+                        <td>5%</td>
+                        <td>MORE THAN 10 DAYS: Rs 40</td>
+                    </tr>
+                    <tr>
+                        <td>151-250</td>
+                        <td>3.5</td>
+                        <td>10%</td>
+                        <td>MORE THAN 25 DAYS: Rs 100</td>
+                    </tr>
+                    <tr>
+                        <td>250 ABOVE</td>
+                        <td>5</td>
+                        <td>20%</td>
+                        <td>MORE THAN 180 DAYS: Fine of Rs 200
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </body>
