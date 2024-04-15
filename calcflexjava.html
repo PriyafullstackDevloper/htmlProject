@@ -1,220 +1,214 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>Calculator</title>
     <style>
-        /* styling for main  */
+        /* body */
+        body{
+            
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* main */
         .main {
-            background-color: gray;
-            display: flex;
-            flex-direction: column;
-            height: 40vw;
-            width: 44vw;
-            margin-left: 15%;
-            margin-top: 7%;
-        }
-        /* 1st row  display one*/
-
-        .first-row {
-            background-color: black;
-            height: 22%;
-            width: 100%;
-            border-radius: 30px;
-            border-style: groove;
-        }
-/* styling for 2nd to 5th row */
-        .row {
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            background-color: gray;
-            height: 67%;
+            grid-template-rows: 1fr 3fr;
+            height: 35vw;
+            width: 30%;
+            border: solid;
+            margin-left: 30%;
+            margin-top: 10%;
+            border-radius: 10px;
+
+
+
+        }
+        /* top box display */
+
+        .frist-box {
+            background-color: rgba(193, 19, 19, 0.589);
+
+        }
+
+
+        
+/* innner boxxx */
+        .inner-box {
+            height: 19.89%;
             width: 100%;
-            border-style: solid;
-        }
+            display: flex;
+            flex-direction: row;
 
-        .gray {
-            background-color: gray;
-            border-style: solid;
+            background-color: rgba(140, 87, 34, 0.32);
         }
+        /* innner top */
 
-        .yellow {
-            background-color: orange;
-            border-style: solid;
-            border-radius: 30px;
-            border-color: black;
+        .inner-one {
+            background-color: rgb(52, 37, 39);
+            height: 100%;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+            color: white;
+
+            text-align: center;
+            border: solid black;
         }
 /* last row */
         .last-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            background-color: gray;
-            border-style: solid;
-            height: 11%;
-            width: 100%;
-            border-radius: 30px;
-            border-color: black;
+            background-color: #ff8811ef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
-/* button */
+        /* button */
+
         button {
+            background-color: #282522;
             height: 100%;
             width: 100%;
-            background-color: gray;
             color: white;
-            background-color: black;
-        border-radius: 30px;
-        border-style: 2px solid;
-        font-size: 25px;
-    
+            font-size: 20px;
         }
+        /* id diplay */
 
         #display {
-            background-color: lightblue;
-            height: 90%;
-            width: 80%;
-            color: black;
-            margin-left: 65px;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            margin-top: 10px;
+            font-size: 25px;
+            color: white;
+            text-align: right;
+            border-radius: 1%;
+            border: solid black 2px;
+            font-size: 42px;
         }
     </style>
+    
+</head>
+
+<body>
+    <!-- main sec -->
+    <div class="main">
+        <!-- frist box -->
+        <div class="frist-box" id="display"></div>
+        <!-- second box -->
+        <div class="sec-box">
+            <div class="inner-box">
+                <div class="inner-one  " onclick="clearfunction()"><button class="last-row">AC</button></div>
+                <div class="inner-one" onclick="displayFuction()"><button class="last-row">+/-</button></div>
+                <div class="inner-one" onclick="displayFuction11()"><button class="last-row">%</button></div>
+                <div class="inner-one last-row" onclick="div()"> <button class="last-row">/</button></div>
+
+            </div>
+            <div class="inner-box">
+                <div class="inner-one" onclick="numberTyped(7)"><button>7</button></div>
+                <div class="inner-one" onclick="numberTyped(8)"><button>8</button></div>
+                <div class="inner-one" onclick="numberTyped(9)"><button>9</button></div>
+                <div class="inner-one last-row" onclick="mult()"><button class="last-row">*</button></div>
+
+            </div>
+            <div class="inner-box">
+                <div class="inner-one"><button onclick="numberTyped(4)">4</button></div>
+                <div class="inner-one" onclick="numberTyped(5)"><button>5</button></div>
+                <div class="inner-one" onclick="numberTyped(6)"><button>6</button></div>
+                <div class="inner-one last-row" onclick="minus()"><button class="last-row">-</button></div>
+
+            </div>
+            <div class="inner-box">
+                <div class="inner-one" onclick="numberTyped(3)"><button>3</button></div>
+                <div class="inner-one" onclick="numberTyped(2)"><button>2</button></div>
+                <div class="inner-one" onclick="numberTyped(1)"><button>1</button></div>
+                <div class="inner-one last-row" onclick="add()"><button class="last-row">+</button></div>
+
+            </div>
+            <div class="inner-box">
+                <div class="inner-one" onclick="numberTyped(0)"><button>0</button></div>
+                <div class="inner-one" style="width: 50%;" onclick="point()"><button>.</button></div>
+                <div class="inner-one last-row" style="width: 50%;" onclick="showresult()"><button class="last-row">=</button></div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
     <script>
-        // clear button
-        function clearFunction() {
-            total = 0;
-            displayString = "";
-            document.getElementById("display").innerHTML = "";
-        }
-        // global variable
         let total = 0;
-        let displayString = "";
-        let lastresult = 0;
-        let action = 0;
+        let displayString = ""
+        action = 0;
 
-// number pass
-        function numberTyped(passednumber) {
-            displayString = displayString + passednumber.toString();
-            document.getElementById("display").innerHTML = displayString;
-
-        //      if (passednumber == 9) {
-        //  document.getElementById("display").style.backgroundColor = "yellow";
-        //      } 
-        //      else if(passednumber==8){
-        //     document.getElementById("display").style.backgroundColor = "green";}
-        //     else if(passednumber==7){
-        //     document.getElementById("display").style.backgroundColor = "pink";}
-        //     else {
-        //      document.getElementById("display").style.backgroundColor = "black";
-        //      }
-        }
-        // result show
-        function showresult() {
-            if(action==1){
-            total = total + Number(displayString);}
-            else if(action==2){
-                total = total - Number(displayString);}
-                else if(action==3){
-                    total = total * Number(displayString);
-
-                }
-                else if(action==4){
-                    total = total / Number(displayString);
-                }
-            displayString = total;
-            document.getElementById("display").innerHTML = displayString;
-
-            // if (action=1){
-            //  document.getElementById("display").innerHTML="";
-            // }else if(action=2){
-            //     document.getElementById("display").innerHTML ="";
-            // }else if (action=3){
-            //     document.getElementById("display").innerHTML ="";
-
-            // }
-
-        }
-        // backspace
-        function backspace() {
-            displayString = displayString.substring(0, displayString.length - 1);
-            document.getElementById("display").innerHTML = displayString;
-        }
-        // add
         function add() {
             total = Number(displayString);
             displayString = "";
-            action= 1;
+            action = 1;
             document.getElementById("display").innerHTML = displayString;
         }
-        // sub
-        function sub() {
-            total =  Number(displayString);
+        function minus() {
+            total = Number(displayString);
             displayString = "";
             action = 2;
             document.getElementById("display").innerHTML = displayString;
         }
-        // mul
-        function mul() {
+        function mult() {
             total = Number(displayString);
             displayString = "";
             action = 3;
-            document.getElementById("display").innerHTML = displayString;
+            document.getElementById("display").innerHTML = displayString
         }
-        // div
-        function div(){
+        function div() {
             total = Number(displayString);
             displayString = "";
             action = 4;
             document.getElementById("display").innerHTML = displayString;
+
+        }
+        function point() {
+            total = Number(displayString)
+            displayString = displayString + point
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+        function showresult() {
+            if (action == 1) {
+                total = total + Number(displayString);
+            } else if (action == 2) {
+                total = total - Number(displayString);
+            } else if (action = 3) {
+                total = total * Number(displayString);
+            } else if (action == 4) {
+                total = total / Number(displayString);
+            }
+
+
+            displayString = total;
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+        function numberTyped(passednumber) {
+            displayString = displayString + passednumber.toString();
+            document.getElementById("display").innerHTML = displayString;
         }
 
+
+
+
+        // cler//
+        function clearfunction() {
+            total = "";
+            displayString = "";
+            document.getElementById("display").innerHTML = ""
+        }
+
+
+
     </script>
-</head>
-
-<body>
-    <!-- main container -->
-    <div class="main">
-        <!-- 1st row -->
-        <div class="first-row">
-            <h1 id="display"></h1>
-        </div>
-        <!-- 2nd row -->
-        <div class="row">
-            <div><button type="submit" onclick="clearFunction()">AC</button></div>
-            <div><button type="submit" onclick="backspace()">Backspace</button></div>
-            <div><button>%</button></div>
-            <div><button class="yellow" onclick="div()">/</button></div>
-            <!-- 3rd row -->
-            <div><button onclick="numberTyped(7)">7</button></div>
-            <div><button onclick="numberTyped(8)">8</button></div>
-            <div><button onclick="numberTyped(9)">9</button></div>
-            <div><button class="yellow" onclick="mul()">*</button></div>
-            <!-- 4th row -->
-            <div><button onclick="numberTyped(4)">4</button></div>
-            <div><button onclick="numberTyped(5)">5</button></div>
-            <div><button onclick="numberTyped(6)">6</button></div>
-            <div><button class="yellow" onclick="sub()">-</button></div>
-
-            <!-- 5th row -->
-            <div><button onclick="numberTyped(1)">1</button></div>
-            <div><button onclick="numberTyped(2)">2</button></div>
-            <div><button onclick="numberTyped(3)">3</button></div>
-            <div><button class="yellow" onclick="add()">+</button></div>
-        </div>
-        <!--last- row -->
-        <div class="last-row">
-            <div><button onclick="numberTyped(0)">0</button></div>
-            <div><button onclick="numberTyped(1)">.</button></div>
-            <div><button class="yellow" onclick="showresult()">=</button></div>
-        </div>
 
 
-
-
-    </div>
 
 </body>
+
 
 </html>
