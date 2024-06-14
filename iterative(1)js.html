@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-container {
+            height: 70vh;
+            width: 60vw;
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+
+        }
+
+        .display-container {
+            height: 30%;
+            width: 100%;
+            background-color: antiquewhite;
+            color: red;
+            font-size: 45px;
+            text-align: center;
+
+        }
+
+        .input-container {
+            height: 70%;
+            width: 100%;
+
+            background-color: gray;
+        }
+
+        .butons {
+            background-color: greenyellow;
+            height: 30%;
+            width: 70%;
+            margin-left: 8%;
+        }
+
+        .input-box {
+            height: 30%;
+            width: 70%;
+            margin-left: 8%;
+
+        }
+    </style>
+    <script>
+    // function displaytext() {
+        //  let x = document.getElementById("input").value;
+        //     let output = "";
+        //     while (x > 0) {
+        //         output = output + "Hello" + "<br/>";
+        //         console.log("Output value is", output);
+        //         x = x-1;
+        //     }
+        //     document.getElementById("display").innerHTML = output;
+        //         }
+        // function clearText(){
+        //     document.getElementById("display").innerHTML = "";
+
+        // }
+
+
+
+        // prompt console use
+        // function displaytext(){
+        //     let age= prompt("enter your age");
+        //     if(age>=18){
+        //         document.getElementById("display").innerHTML="you are eligible for vote";
+        //     }else{
+        //         document.getElementById("display").innerHTML="you are not eligible for vote";   
+        //     }
+        // }
+        function displaytext(){
+            
+        
+            let name = prompt("Enter your name");
+            let output ="";
+            
+            while(name > 0){
+                output = output + "priya <br/>";
+            
+               name = name-1;
+               document.getElementById("display").innerHTML = output;
+
+
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display-container" id="display" ></div>
+        <div class="input-container">
+            <input type="number" id="input" class="input-box">
+            <button class="butons"onclick="displaytext()">CLICK ME</button>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

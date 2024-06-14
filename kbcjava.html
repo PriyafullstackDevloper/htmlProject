@@ -7,21 +7,21 @@
     <style>
         /* container que/ans */
         .container {
-            width: 80vw;
-            height: 80vh;
-
+            height: 1400px;
+            width: 100%;
         }
+
 
         /* display box */
         .display {
             width: 100%;
             height: 20%;
-            background-color:#0C2D57;
+            background-color: #0C2D57;
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            margin-top: 7%;
+
+            margin-top: 17%;
             border-radius: 40px;
         }
 
@@ -30,14 +30,15 @@
             color: white;
             font-size: 30px;
             padding: 20px;
-            
+
 
         }
+
         /* .container{
             height: 25%;
             width: 70%;
              */
-    
+
 
         /* button */
         button {
@@ -52,8 +53,8 @@
 
         .custom-button {
             margin-top: 40px;
-            margin-left: 10%;
-            background-color:#474F7A;
+            margin-left: 15%;
+            background-color: #474F7A;
             color: white;
             width: 550px;
             height: 70px;
@@ -111,8 +112,8 @@
             document.getElementById("answer-four").innerHTML = "None of the above";
         }
         // que 6
-        function questionSix(){
-        document.getElementById("display-text").innerHTML =
+        function questionSix() {
+            document.getElementById("display-text").innerHTML =
                 "6. The role of view in model-view-controller architecture is ____.";
             document.getElementById("answer-one").innerHTML = "Displaying data to the user";
             document.getElementById("answer-two").innerHTML = "Optimize database queries";
@@ -120,8 +121,8 @@
             document.getElementById("answer-four").innerHTML = "Manage server-side routing";
         }
         // que 7
-        function questionSeven(){
-        document.getElementById("display-text").innerHTML =
+        function questionSeven() {
+            document.getElementById("display-text").innerHTML =
                 "7. Amongst which of the following is not a NoSQL database used in Full Stack Development?";
             document.getElementById("answer-one").innerHTML = "MongoDB";
             document.getElementById("answer-two").innerHTML = "PostgreSQL";
@@ -129,8 +130,8 @@
             document.getElementById("answer-four").innerHTML = "Hadoop";
         }
         // que 8
-        function questionEight(){
-        document.getElementById("display-text").innerHTML =
+        function questionEight() {
+            document.getElementById("display-text").innerHTML =
                 "8.Which HTML tag is used to create vector graphics and illustrations?";
             document.getElementById("answer-one").innerHTML = "canvas tag";
             document.getElementById("answer-two").innerHTML = "svg tag";
@@ -138,8 +139,8 @@
             document.getElementById("answer-four").innerHTML = "details tag";
         }
         // que 9
-        function questionNine(){
-        document.getElementById("display-text").innerHTML =
+        function questionNine() {
+            document.getElementById("display-text").innerHTML =
                 "9.In HTML, the iframe tag is used to ____.";
             document.getElementById("answer-one").innerHTML = "Embed another HTML document or a web page within the current document";
             document.getElementById("answer-two").innerHTML = "Insert a video in the HTML document";
@@ -147,8 +148,8 @@
             document.getElementById("answer-four").innerHTML = "None of the above";
         }
         // que 10
-        function questionTen(){
-        document.getElementById("display-text").innerHTML =
+        function questionTen() {
+            document.getElementById("display-text").innerHTML =
                 "10.Is JavaScript synchronous or asynchronous?";
             document.getElementById("answer-one").innerHTML = "Synchronous";
             document.getElementById("answer-two").innerHTML = "Asynchronous";
@@ -156,17 +157,17 @@
             document.getElementById("answer-four").innerHTML = "Synchronous but can be used as asynchronous";
         }
         // 11
-        function questionEleven(){
-        document.getElementById("display-text").innerHTML =
-        "11.A web server in Full Stack Development is ____.?"
+        function questionEleven() {
+            document.getElementById("display-text").innerHTML =
+                "11.A web server in Full Stack Development is ____.?"
             document.getElementById("answer-one").innerHTML = "Rendering the user interface";
             document.getElementById("answer-two").innerHTML = "Handling client-side interactions";
             document.getElementById("answer-three").innerHTML = "Executing server-side code and processing requests"
             document.getElementById("answer-four").innerHTML = "Writing server-side logics";
         }
         // 12
-        function questionTwelve(){
-        document.getElementById("display-text").innerHTML =
+        function questionTwelve() {
+            document.getElementById("display-text").innerHTML =
                 "12. What is Git?";
             document.getElementById("answer-one").innerHTML = "Framework";
             document.getElementById("answer-two").innerHTML = "Version control system";
@@ -174,16 +175,16 @@
             document.getElementById("answer-four").innerHTML = "Package manager";
         }
         // 13
-        function questionThirteen(){
-        document.getElementById("display-text").innerHTML =
+        function questionThirteen() {
+            document.getElementById("display-text").innerHTML =
                 "13.Database in Full stack development is used to ____.?";
             document.getElementById("answer-one").innerHTML = "Styling HTML pages";
             document.getElementById("answer-two").innerHTML = "Storing and retrieving data";
             document.getElementById("answer-three").innerHTML = "Handling error on server side";
             document.getElementById("answer-four").innerHTML = "Rendering web pages";
-         }14
-        function questionFourteen(){
-        document.getElementById("display-text").innerHTML =
+        } 14
+        function questionFourteen() {
+            document.getElementById("display-text").innerHTML =
                 "14.Which of the following is not a front-end technology?";
             document.getElementById("answer-one").innerHTML = "HTML";
             document.getElementById("answer-two").innerHTML = "CSS";
@@ -191,8 +192,8 @@
             document.getElementById("answer-four").innerHTML = "SQL";
         }
         // 15
-        function questionFifteen(){
-        document.getElementById("display-text").innerHTML =
+        function questionFifteen() {
+            document.getElementById("display-text").innerHTML =
                 "15.Which of the following methods is used to access HTML elements using Javascript?";
             document.getElementById("answer-one").innerHTML = "getElementbyid()";
             document.getElementById("answer-two").innerHTML = "getElementbyclassname()";
@@ -202,7 +203,9 @@
         // function question question
         function question(question) {
             document.getElementById("container").style.backgroundColor = "#0C2D57"
+            document.getElementById("bodyy").style.backgroundImage = "url('https://static.toiimg.com/photo/86196127.cms')";
             if (question == 1) {
+
                 questionNumber = 1;
                 questionOne();
             } else if (question == 2) {
@@ -260,128 +263,197 @@
             else if (question == 15) {
                 questionNumber = 15;
                 questionFifteen();
+
             }
             else {
-            document.getElementById("display-text").innerHTML =
-            "MUBARAKHO AAP JIT GAYE 5 CARORE....";
-            let audio = document.getElementById
+                document.getElementById("display-text").innerHTML =
+                    "MUBARAKHO AAP JIT GAYE 5 CARORE....";
 
+            }
         }
-    }
         // correct answer
         function answer(givenAnswer) {
+
             if (questionNumber == 1) {
                 if (givenAnswer == 1) {
                     answerOne(true, 2);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
+
+
+
                 } else {
                     answerOne(false, 0)
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
+
                 }
             } else if (questionNumber == 2) {
                 if (givenAnswer == 1) {
                     answerOne(true, 3);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
+
+
                 } else {
                     answerOne(false, 0)
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
+
                 }
             }
             else if (questionNumber == 3) {
                 if (givenAnswer == 1) {
                     answerOne(true, 4);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
                     answerOne(false, 0)
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 4) {
                 if (givenAnswer == 4) {
                     answerOne(true, 5);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
 
             else if (questionNumber == 5) {
-                if (givenAnswer == 1 ) {
+                if (givenAnswer == 1) {
                     answerOne(true, 6);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 6) {
                 if (givenAnswer == 1) {
                     answerOne(true, 7);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 7) {
-                if (givenAnswer == 4 ) {
+                if (givenAnswer == 4) {
                     answerOne(true, 8);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
             else if (questionNumber == 8) {
                 if (givenAnswer == 2) {
                     answerOne(true, 9);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 9) {
                 if (givenAnswer == 1) {
                     answerOne(true, 10);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 10) {
-                if (givenAnswer == 4 ) {
+                if (givenAnswer == 4) {
                     answerOne(true, 11);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 11) {
                 if (givenAnswer == 3) {
                     answerOne(true, 12);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 12) {
-                if (givenAnswer == 2 ) {
+                if (givenAnswer == 2) {
                     answerOne(true, 13);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
             else if (questionNumber == 13) {
                 if (givenAnswer == 2) {
                     answerOne(true, 14);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
             else if (questionNumber == 14) {
                 if (givenAnswer == 4) {
                     answerOne(true, 15);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
             else if (questionNumber == 15) {
                 if (givenAnswer == 3) {
                     answerOne(true, 16);
+                    let audio = new Audio("./galt.mp3");
+                    audio.pause();
+
                 } else {
-                    answerOne(false, 0)
+                    answerOne(false, 0);
+                    let audio = new Audio("./sahi.mp3");
+                    audio.pause();
                 }
             }
 
@@ -390,21 +462,25 @@
         function answerOne(correctAnswer, nextQuestion) {
             if (correctAnswer) {
                 document.getElementById("display-text").innerHTML =
-                    "Bilkul Sahi jawab";
-                document.getElementById("container").style.backgroundColor = "#004225";
+                    "Bilkul Sahi jawab👍🏻";
+                let audio = new Audio("./sahi.mp3");
+                audio.play();
+
+
+
+                document.getElementById("container").style.backgroundColor = "#F6F193";
                 setTimeout(() => {
                     question(nextQuestion);
                 }, 3000);
-            } else {
+            } else
                 document.getElementById("display-text").innerHTML =
-                    " Galat Jawab.";
-                document.getElementById("container").style.backgroundColor = "#B80000";
-                setTimeout(() => {
-                    startScreen();
-                }, 2000);
-
-
-            }
+                    " Galat Jawab.❌";
+            document.getElementById("container").style.backgroundColor = "#FF6868";
+            let audio = new Audio("./galt.mp3");
+            audio.play();
+            setTimeout(() => {
+                startScreen();
+            }, 2000);
         }
 
 
@@ -418,7 +494,7 @@
 </head>
 <!-- background image -->
 
-<body style="background-image: url(https://assets.telegraphindia.com/telegraph/2023/Jul/1690179957_kaun-banega-crorepati-ab-1.jpeg);
+<body id="bodyy" style="background-image: url(https://assets.telegraphindia.com/telegraph/2023/Jul/1690179957_kaun-banega-crorepati-ab-1.jpeg);
 background-repeat: no-repeat;
 background-size: cover;">
 

@@ -9,8 +9,8 @@
     border-radius: 20px;
     border-style: solid;
     border-color: black;
-
 }
+
 /* all row */
 .row {
     display: grid;
@@ -20,6 +20,7 @@
     border-style: solid;
     border-color: black;
 }
+
 /* 1st row */
 .first-row {
     gap: 5px;
@@ -27,38 +28,39 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-/* 2nd row */
 
+/* 2nd row */
 .second-row {
     gap: 5px;
     background-color: silver;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
 }
-/* 3rd row */
 
+/* 3rd row */
 .third-row {
     gap: 5px;
-
     background-color: silver;
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-/* 4th row */
 
+/* 4th row */
 .fourth-row {
     gap: 5px;
     background-color: silver;
     display: grid;
     grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.8fr;
 }
+
 /* 5th row */
 .fifth-row {
     background-color: silver;
     gap: 5px;
     display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
 }
+
 /* 6th row */
 .sixth-row {
     background-color: silver;
@@ -67,6 +69,7 @@ grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
 }
+
 /* all button */
 .button {
     background-color: black;
@@ -74,8 +77,8 @@ grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
     padding: 10px;
     font-size: 15px;
     color: white;
-
 }
+
 /* last row */
 .last-row {
     background-color: black;
@@ -83,20 +86,74 @@ grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
     padding: 10px;
     color: white;
     border-radius: 20px;
-
 }
-/* enter button */
 
+/* enter button */
 button {
     background-color: black;
 }
+
 /* screen */
-.display{ border-style: groove;
+.display {
+    border-style: groove;
     border-radius: 30px;
     border-color: silver;
     background-image: url(./assets/display.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
+}
 
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .main {
+        width: 90vw;
+        height: auto;
+        margin-left: 5%;
+    }
+}
 
+@media (max-width: 768px) {
+    .main {
+        width: 100vw;
+        height: auto;
+        margin-left: 0;
+        margin-top: 2%;
+    }
+
+    .row {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    }
+
+    .button, .last-row {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        width: 100vw;
+        height: auto;
+        margin-left: 0;
+        margin-top: 2%;
+    }
+
+    .row {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row {
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    }
+
+    .button, .last-row {
+        font-size: 10px;
+        padding: 5px;
+    }
 }

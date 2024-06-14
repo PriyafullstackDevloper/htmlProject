@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        button {
+            font-weight: bold;
+            font-size: 35px;
+            color: #B47B84;
+            margin-left: 5%;
+            margin-top: 5%;
+            border-style: groove;
+            border-radius: 30px;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaWMqSOgG5OAZXni_5Yq2yyokN7C7XMpMwP76YiGzOHwwrq34_qznvKkQDdq2YxFYS3Cs&usqp=CAU);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .videos {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            margin-left: 0;
+
+        }
+        .custom-button{
+            height: 10%;
+            width: 10%;
+            border-style: groove;
+            border-radius: 30px;
+            background-color: #31363F;
+            font-size: 40px;
+        }
+        .display{
+            height: 10%;
+            width: 80%;
+            background-color: #344955;
+            font-size: 40px;
+        }
+    </style>
+    <script>
+        function videoStart() {
+            document.getElementById("play-button").innerHTML = "";
+            let video = document.createElement('video');
+            video.src = './assets/kbcentry.mp4';
+            video.controls = true;
+            video.width = 2000;
+            video.height = 4000;
+            document.getElementById("video-container").appendChild(video);
+
+        }
+        function dostart(){
+            document.getElementById("dostart-page1").hidden = true;
+            document.getElementById("video-container").hidden = false;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- main -->
+    <div class="main" id="dostart-page1" type="hidden" value="true" onclick="dostart()">
+        <button id="play-button" onclick="videoStart()">LET'S START</button>
+    </div>
+    <!-- video container -->
+    <div class="videos" id="video-container">
+        <button id="next-page" class="buttons" onclick="next()">Next</button>
+    </div>
+    <!-- question answer division -->
+    <div class="display" id="container">
+        <h1 id="display-text" class="display-text"></h1>
+    </div>
+    <!-- answer button -->
+    <button class="custom-button" id="answer-one"></button>
+    <button class="custom-button" id="answer-two"></button>
+    <button class="custom-button" id="answer-three"></button>
+    <button class="custom-button" id="answer-four"></button>
+
+</body>
+
+</html>
