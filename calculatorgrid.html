@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* General styles for the body */
+        body {
+            background-image: url("./calculator.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Main container styles */
+        .main {
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            height: 90vh;
+            width: 50vw;
+            border: solid;
+            margin: 5% auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: fill;
+        }
+
+        /* Display styles */
+        .display {
+            background-color: rgb(175, 199, 169);
+            font-size: 42px;
+            color: white;
+            text-align: right;
+            padding: 10px;
+            border-radius: 1%;
+            border: solid black 2px;
+        }
+
+        /* Row styles */
+        .row {
+            height: 19.89%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(39, 37, 34);
+        }
+
+        /* Inner button container styles */
+        .inner-one {
+            background-color: rgb(52, 37, 39);
+            height: 100%;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+            color: white;
+            text-align: center;
+            border: solid black;
+        }
+
+        /* Special styles for the last row buttons */
+        .last-row {
+            background-color: rgb(227, 125, 55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Button styles */
+        button {
+            background-color: #282522;
+            height: 100%;
+            width: 100%;
+            color: white;
+            font-size: 22px;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 1024px) {
+            .main {
+                width: 70vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                width: 90vw;
+                height: 80vh;
+            }
+
+            .display {
+                font-size: 32px;
+            }
+
+            button {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main {
+                width: 100vw;
+                height: 70vh;
+                margin: 5% 0;
+            }
+
+            .display {
+                font-size: 28px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+
+            .row {
+                height: auto;
+            }
+
+            .inner-one {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main calculator container -->
+    <div class="main">
+        <!-- Display for showing input and results -->
+        <div class="display" id="display"></div>
+        <!-- Container for calculator buttons -->
+        <div class="second-container">
+            <!-- First row of buttons -->
+            <div class="row">
+                <div class="inner-one" onclick="clearfunction()"><button class="last-row">AC</button></div>
+                <div class="inner-one" onclick="displayFuction()"><button class="last-row">+/-</button></div>
+                <div class="inner-one" onclick="displayFuction11()"><button class="last-row">%</button></div>
+                <div class="inner-one last-row" onclick="div()"><button class="last-row">/</button></div>
+            </div>
+            <!-- Second row of buttons -->
+            <div class="row">
+                <div class="inner-one" onclick="numberTyped(7)"><button>7</button></div>
+                <div class="inner-one" onclick="numberTyped(8)"><button>8</button></div>
+                <div class="inner-one" onclick="numberTyped(9)"><button>9</button></div>
+                <div class="inner-one last-row" onclick="mult()"><button class="last-row">*</button></div>
+            </div>
+            <!-- Third row of buttons -->
+            <div class="row">
+                <div class="inner-one" onclick="numberTyped(4)"><button>4</button></div>
+                <div class="inner-one" onclick="numberTyped(5)"><button>5</button></div>
+                <div class="inner-one" onclick="numberTyped(6)"><button>6</button></div>
+                <div class="inner-one last-row" onclick="minus()"><button class="last-row">-</button></div>
+            </div>
+            <!-- Fourth row of buttons -->
+            <div class="row">
+                <div class="inner-one" onclick="numberTyped(3)"><button>3</button></div>
+                <div class="inner-one" onclick="numberTyped(2)"><button>2</button></div>
+                <div class="inner-one" onclick="numberTyped(1)"><button>1</button></div>
+                <div class="inner-one last-row" onclick="add()"><button class="last-row">+</button></div>
+            </div>
+            <!-- Fifth row of buttons -->
+            <div class="row">
+                <div class="inner-one" onclick="numberTyped(0)"><button>0</button></div>
+                <div class="inner-one" style="width: 50%;" onclick="point()"><button>.</button></div>
+                <div class="inner-one last-row" style="width: 50%;" onclick="showresult()"><button class="last-row">=</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize variables
+        let total = 0;
+        let displayString = "";
+        let action = 0;
+
+        // Function to handle addition
+        function add() {
+            total = Number(displayString);
+            displayString = "";
+            action = 1;
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        // Function to handle subtraction
+        function minus() {
+            total = Number(displayString);
+            displayString = "";
+            action = 2;
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        // Function to handle multiplication
+        function mult() {
+            total = Number(displayString);
+            displayString = "";
+            action = 3;
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        // Function to handle division
+        function div() {
+            total = Number(displayString);
+            displayString = "";
+            action = 4;
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        // Function to handle decimal point input
+        function point() {
+            if (!displayString.includes(".")) {
+                displayString += ".";
+                document.getElementById("display").innerHTML = displayString;
+            }
+        }
+
+        // Function to show the result of the operation
+        function showresult() {
+            if (action == 1) {
+                total += Number(displayString);
+            } else if (action == 2) {
+                total -= Number(displayString);
+            } else if (action == 3) {
+                total *= Number(displayString);
+            } else if (action == 4) {
+                total /= Number(displayString);
+            }
+
+            displayString = total.toString();
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        // Function to handle number input
+        function numberTyped(passednumber) {
+            displayString += passednumber.toString();
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        // Function to clear the display and reset variables
+        function clearfunction() {
+            total = 0;
+            displayString = "";
+            document.getElementById("display").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
