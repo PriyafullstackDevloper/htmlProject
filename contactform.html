@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Font Awesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTX0FxItQdH0AKxOfiIUL+6VRiAIO8lB2efpUkrLpzEX5Z1h6jl2l1d1eK2BdyZBcn+fh5+dA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Contact section styling */
+        .contact {
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url(https://www.w3schools.com/css/img_mountains.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Contact section content styling */
+        .contact .contact-content {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contact .contact-content h2 {
+            font-size: 36px;
+            font-weight: 500;
+            color: black;
+        }
+
+        .contact .contact-content p {
+            font-weight: 50px;
+            color: black;
+        }
+
+        /* Contact container styling */
+        .contact-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        /* Contact information styling */
+        .contact-container .contactInfo {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-container .contactInfo .contactbox {
+            position: relative;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-container .contactInfo .contactbox .icon {
+            min-width: 60px;
+            height: 60px;
+            background: #ffffff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+            color: #00bcd4;
+            transition: background 0.3s, color 0.3s;
+        }
+        .contact-container .contactInfo .contactbox.icon i {
+            color: #ffd700;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Hover effect for icons */
+        .contact-container .contactInfo .contactbox .icon:hover {
+            background: #00bcd4;
+            color: #fff;
+        }
+
+        .contact-container .contactInfo .contactbox .text {
+            font-size: 16px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            font-weight: 300;
+        }
+
+        .contact-container .contactInfo .contactbox .text h3 {
+            font-weight: 90px;
+            color: #00bcd4;
+            font-size: 24px; /* Increased font size for h3 */
+            margin: 0; /* Remove left margin */
+        }
+
+        .contact-container .contactInfo .contactbox .text p {
+            font-size: 18px; /* Increased font size for p */
+            margin: 0; /* Remove left margin */
+        }
+
+        /* Contact form styling */
+        .contactForm {
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+        }
+
+        .contactForm .inputBox {
+            position: relative;
+            width: 100%;
+             margin-top: 10px; 
+        }
+
+        .contactForm .inputBox input,
+        .contactForm .inputBox textarea {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+
+        .contactForm .inputBox span {
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+        }
+
+        .contactForm .inputBox input:focus ~ span,
+        .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox textarea:focus ~ span,
+        .contactForm .inputBox textarea:valid ~ span {
+            color: #e91e63;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+
+        .contactForm .inputBox input[type="submit"] {
+            width: 100px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 1200px) {
+            .contact {
+                padding: 50px 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-container .contactInfo, .contactForm {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contact .contact-content {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact {
+                padding: 20px 10px;
+            }
+
+            .contact .contact-content h2 {
+                font-size: 28px;
+            }
+
+            .contact .contact-content p {
+                font-size: 14px;
+            }
+
+            .contactForm {
+                padding: 20px;
+            }
+
+            .contactForm .inputBox input[type="submit"] {
+                width: 100%;
+            }
+        }
+        
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Contact section -->
+    <section class="contact">
+        <!-- Contact section content -->
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <p>
+                Hey, this is my Contact Page, so I have to say something about myself. <br>
+                Sometimes it is hard to introduce yourself because you know yourself so well that you do not know <br>
+                where to start with. Let me give a try to see what kind of image you have about me <br>
+                through my self-description. I hope that my impression about myself and your impression <br>
+                about me are not so different. Here it goes.
+            </p>
+        </div>
+        <div class="contact-container">
+            <!-- Contact information -->
+            <div class="contactInfo">
+                <div class="contactbox">
+                    <div class="icon"><i class='bx bx-current-location'></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>61, Narmada Colony, Friends colony <br> Katol road Nagpur <br> 440013</p>
+                    </div>
+                </div>
+                <div class="contactbox">
+                    <div class="icon"><i class='bx bx-phone'></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>7767831819</p>
+                    </div>
+                </div>
+                <div class="contactbox">
+                    <div class="icon"><i class='bx bxl-gmail'></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>priyamahajan2405@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact form -->
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="fullname" required="">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required="">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required="required"></textarea>
+                        <span>Type Your Message....</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="send" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
