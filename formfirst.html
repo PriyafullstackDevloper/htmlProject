@@ -1,94 +1,127 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <!-- internal style -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
     <style>
-        /* main */
-        .form-style {
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url(https://img.freepik.com/premium-vector/hand-drawn-minimal-abstract-blue-grey-shape-background_643365-41.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Form container */
+        .form-container {
             background-color: #436850;
-            float: 30px;
             padding: 20px;
-            height: 40%;
-            width: 600px;
-            margin-left: 300px;
-            margin-top: 100px;
-
+            margin: 10% auto;
+            max-width: 600px;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* text style */
-        .text-style {
-            color: aliceblue;
-        }
-
-        /* h1 */
-        .h1-style {
+        /* Form heading */
+        .form-heading {
             font-size: 30px;
             color: blue;
             background-color: #B47B84;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
         }
-/* background image */
-        body {
-            background-image: url(https://img.freepik.com/premium-vector/hand-drawn-minimal-abstract-blue-grey-shape-background_643365-41.jpg);
+
+        /* Text and label styles */
+        .text-style {
+            color: aliceblue;
+            font-size: 18px;
+        }
+
+        /* Checkbox styles */
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group label {
+            margin-right: 10px;
+        }
+
+        /* Submit button */
+        .submit-button {
+            font-size: 20px;
+            color: #40A2E3;
+            background-color: #C7C8CC;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .form-container {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .form-container {
+                padding: 10px;
+            }
+            .form-heading {
+                font-size: 24px;
+            }
+            .submit-button {
+                font-size: 18px;
+            }
         }
     </style>
-
-    <!-- link inport -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
-    <!-- form heading -->
-    <form action="./formsecond.html" class="form-style">
-        <fieldset class="text-style">
-            <h1 class="h1-style">Enjoy Programming:Enter yours Details</h1>
-            <ul>
-                <!-- first section -->
-                <label for="name">FIRST NAME;</label>
-                <input type="text">
-                <br>
-                <br>
-                <label for="last name">LAST NAME;</label>
-                <input type="text">
-                <br>
-                <br>
-                <!-- second section -->
-                <li>What laptop do you own?</li>
-                <input type="checkbox" id="os">
-                <label for="windows">Windows</label><br>
-                <input type="checkbox" id="os">
-                <label for="linux">Linux</label><br>
-                <input type="checkbox">
-                <label for="Mac">Mac</label>
-                <br>
-
-                <!-- third section -->
-                <li>Select your education</li>
-
-                <input type="checkbox" id="education">
-                <label for="schooling">Schooling</label>
-                <br>
-                <input type="checkbox" id="education">
-                <label for="jr.collage">Jr.Collage</label>
-                <br>
-                <input type="checkbox" id="education">
-                <label for="graduation">Graduation</label>
-                <br>
-                <input type="checkbox">
-                <label for="post graduation">Post Graduation</label>
-                <br>
-                <input type="checkbox">
-                <label for="PHD">PHD</label>
-                <br>
-                <br>
-                <!-- submit -->
-                <input type="submit" value="Next" style="font-size: 30px;color: #40A2E3; background-color: #C7C8CC;">
-                </u>
-        </fieldset>
-    </form>
+    <div class="form-container">
+        <form action="./formsecond.html">
+            <div class="form-heading">Enjoy Programming: Enter your Details</div>
+            <div class="text-style">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName"><br><br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName"><br><br>
+            </div>
+            <div class="checkbox-group text-style">
+                <span>What laptop do you own?</span><br>
+                <input type="checkbox" id="windows" name="os">
+                <label for="windows">Windows</label>
+                <input type="checkbox" id="linux" name="os">
+                <label for="linux">Linux</label>
+                <input type="checkbox" id="mac" name="os">
+                <label for="mac">Mac</label><br><br>
+            </div>
+            <div class="checkbox-group text-style">
+                <span>Select your education:</span><br>
+                <input type="checkbox" id="schooling" name="education">
+                <label for="schooling">Schooling</label><br>
+                <input type="checkbox" id="jrCollege" name="education">
+                <label for="jrCollege">Jr. College</label><br>
+                <input type="checkbox" id="graduation" name="education">
+                <label for="graduation">Graduation</label><br>
+                <input type="checkbox" id="postGraduation" name="education">
+                <label for="postGraduation">Post Graduation</label><br>
+                <input type="checkbox" id="phd" name="education">
+                <label for="phd">PhD</label><br><br>
+            </div>
+            <input type="submit" value="Next" class="submit-button">
+        </form>
+    </div>
 </body>
-
 </html>

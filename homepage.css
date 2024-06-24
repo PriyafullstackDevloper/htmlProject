@@ -1,113 +1,270 @@
-/* styling for main box */
-.main {
-    background-color: aliceblue;
-    height: 1200px;
-    width: 80%;
-    border-style: solid;
-    margin-left: 10%;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-/* styling for 1st row */
-.firstrow {
+/* body */
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: black;
-    background-image: url(https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsb2ZmaWNlMThfZGlnaXRhbF9hYnN0cmFjdF9saW5lX2FydF9lbWl0dGVyX2JsdWVfbGlnaHRfZF9iZTYzZmU2Yi02YTc3LTRlMjctOGQ1Ni0xZWFiMGViOWU0MjFfMS5qcGc.jpg);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    
 }
 
-/* styling for 2nd box */
 
-.secondbox {
-    color: #2D9596;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-/* form project */
-.form-project {
-    background-color: #9195F6;
-    font-size: 20px;
-    color: black;
-    padding: 10px;
-    border-style: groove;
-    border-color: black;
-    font-family: serif;
 
+/* navbar */
+/* * Base styles for navbar */ */
+.navbar {
+display: flex;; /* Changed from flex-end to space-between */
+padding: 20px;
 }
 
-.youtube-page {
-    background-color: #9195F6;
-    color: black;
-    padding: 10px;
-    border-style: groove;
-    border-color: black;
-    font-family: serif;
-
+.navbar ul {
+list-style: none;
+display: flex;
+justify-content: flex-end; /* Center the links */
+align-items: flex-end; /* Align items vertically */
+width: 100%; /* Full width to utilize the space */
+margin: 0;
+padding: 0;
 }
 
-/* styling for 1st row */
-
-.firstbox {
-    background-color: white;
-    height: 80%;
-    width: 70%;
-    margin-left: 5%;
-    margin-top: 3%;
-    margin-bottom: 10%;
-    padding: 3%;
-    background-image: url(https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_1280.jpg);
+.navbar li {
+margin: 0 10px; /* Add some space between the links */
 }
 
-/* styling for 2nd row */
-.secondrow {
-    background-color: #9195F6;
+.navbar a {
+color: white;
+padding: 15px 20px;
+text-decoration: none;
+font-size: 22px;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgba(31 31 31);
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: gray;
+    min-width: 180px; /* Increased min-width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    justify-content: flex-end;
+}
+
+.dropdown-content a {
+    color: #555;
+    padding: 14px 18px; /* Increased padding */
+    text-decoration: none;
+    display: block;
+    justify-content: flex-end;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* grid-container */
+.project-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-style: groove;
-    border-color: black;
-}
-
-/* styling for second row 3 column */
-.first-col {
-    font-family: serif;
-    background-color: #9195F6;
-    font-size: 20px;
-    color: black;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(299px, 1fr));
     padding: 10px;
-    border-style: groove;
-    border-color: black;
-    font-size: 20px;
+ 
+    /* background-color: #555; */
 }
 
-.second-col {
-    font-family: serif;
-    background-color: #9195F6;
-    font-size: 20px;
-    color: black;
-    padding: 10px;
-    font-size: 20px;
+.project-section div {
+    background-color: whitesmoke;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    aspect-ratio: 1;
+    background-image: url(https://pngtree.com/freebackground/smoke-powder-atmosphere-color-gradient_926839.html);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
 }
 
-.third-col {
-    font-family: serif;
-    background-color: #9195F6;
-    font-size: 20px;
-    color: black;
-    padding: 10px;
-    border-style: groove;
-    border-color: black;
-    font-size: 20px;
+
+.project-section div:hover {
+    border: solid 2px green;
 }
 
-.thirdbox {
-    background-color: pink
+/* Image styles */
+img {
+    height: 200px;
+    width: 200px;
+    border: 2px black solid;
+    box-shadow: 10px 5px 10px black;
+    border-radius: 30px;
+    filter: grayscale(20%);
 }
 
-/* styling for image */
-.images {
-    height: 90%;
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
+img:hover {
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+    filter: grayscale(0%);
+}
+
+/* Button styles */
+button {
+    color: whitesmoke;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: oldlace;
+}
+
+/* Project section styles */
+.project-section {
+    margin: 20px;
+}
+
+.project {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.project img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.project button {
+    background-color: #333;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.project button:hover {
+    background-color: #555;
+}
+
+/* Media Queries */
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .welcome-message h1 {
+        font-size: 36px;
+    }
+
+    .welcome-message p {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 20px;
+    }
+
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .welcome-message {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .welcome-message h1 {
+        font-size: 28px;
+    }
+
+    .welcome-message p {
+        font-size: 14px;
+    }
+
+    .navbar ul {
+        flex-direction: row-reverse;
+    justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+
+
+    .project-section {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    .project-section div {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+/* For mobile screens with max width 380px */
+@media (max-width: 380px) {
+    .welcome-message {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .welcome-message h1 {
+        font-size: 24px;
+    }
+
+    .welcome-message p {
+        font-size: 12px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: flex-end; 
+       
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+   
+    .project-section {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    .project-section div {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    img {
+        height: 120px;
+        width: 120px;
+    }
 }

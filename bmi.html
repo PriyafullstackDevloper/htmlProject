@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .main{
+        height: 60vh;
+        width: 50vw;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        margin-left: 30%;
+        margin-top: 10%;
+
+    }
+    .display-container{
+        height: 40%;
+        width: 100%;
+        background-color: purple;
+        text-align: center;
+        font-size: 40px;
+        font-family: bold;
+        color: white;
+        justify-content: center;
+        
+
+    }
+    .input-box{
+        height: 60%;
+        width: 100%;
+        background-color: blue;
+     /* justify-content: center;  */
+    }
+    .button{
+        height: 20%;
+        width: 80%;
+        background-color: green;
+        font-size: 30px;
+        margin-left: 10%;
+        /* justify-content: center;  */
+    }
+    .input{
+        height: 20%;
+        width: 80%;
+        background-color:pink;
+        font-size: 30px;
+        margin-left: 10%;
+        /* justify-content: center;  */
+    }
+
+    
+</style>
+<script>
+    function checkBmi(){
+        let x = Number(document.getElementById("input").value);
+        let height = 1.40;
+        let bmi = x/(height * height);
+        let output;
+        if(bmi < 18.5 ){
+            output = "underweight";
+        }else if (bmi < 24.6){
+            output = "Normal weight";
+        }else if(bmi < 34.5){
+            output = "Overweight";
+        }else{
+            output = Obese;
+        }
+        console.log("output",bmi)
+        document.getElementById("display").innerHTML = output;
+    }
+
+function checktime(){
+    let time = 24 ;
+    let x = document.getElementById("input").value;
+}
+</script>
+
+</head>
+<body>
+    <div class="main">
+        <div class="display-container" id="display"></div>
+        <div class="input-box">
+            <input class="input" id="input" placeholder="input" type="number"></button>
+            <button class="button" onclick="checktime()">click me</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,169 +1,171 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <style>
+      .main-container {
+        height: 100vh;
+        width: 60vw;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1%;
+        margin-left: 1%;
+        border-radius: 30px;
+      }
+
+      .display {
+        height: 50%;
+        width: 100%;
+        background-color: #378ce7;
+        border-radius: 30px;
+        background-image: url(https://cdn.vietnambiz.vn/2020/2/5/lottery-1580895821117709492600.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 40px;
+        text-align: center;
+        color: white;
+      }
+
+      .input-box {
+        height: 50%;
+        width: 100%;
+        background-image: url(https://t3.ftcdn.net/jpg/03/91/40/94/360_F_391409414_q9NlOwNJ18dmYZT5pqTBIKGIoJu2iQsP.jpg);
+      }
+
+      .input {
+        height: 20%;
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        border-radius: 30px;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .buttons {
+        height: 20%;
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: #fcdc2a;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .loader {
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        display: flex;
+        justify-content: center;
+        margin-left: 40%;
+        margin-top: 10%;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      /* Media query for responsiveness on smaller screens */
+      @media (max-width: 600px) {
+        /* Adjust styles for screens smaller than 600px */
         .main-container {
-            height: 100vh;
-            width: 60vw;
-            background-color: gray;
-            display: flex;
-            flex-direction: column;
-            margin-top: 1%;
-            margin-left: 1%;
-            border-radius: 30px;
-
-        }
-
-
-
-        .display {
-            height: 50%;
-            width: 100%;
-            background-color: #378CE7;
-            border-radius: 30px;
-            background-image: url(https://cdn.vietnambiz.vn/2020/2/5/lottery-1580895821117709492600.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-size: 40px;
-            text-align: center;
-            color: white;
-
-        }
-
-        .input-box {
-            height: 50%;
-            width: 100%;
-            background-image: url(https://t3.ftcdn.net/jpg/03/91/40/94/360_F_391409414_q9NlOwNJ18dmYZT5pqTBIKGIoJu2iQsP.jpg);
-
-        }
-
-        .input {
-            height: 20%;
-            width: 70%;
-            margin-left: 10%;
-            margin-right: 10%;
-            margin-top: 2%;
-            border-radius: 30px;
-            font-size: 40px;
-            text-align: center;
-
-
-        }
-
+          width: 90vw;
+        } /* Increase width for smaller screens */
+        .input,
         .buttons {
-            height: 20%;
-            width: 70%;
-            margin-left: 10%;
-            margin-right: 10%;
-            background-color: #FCDC2A;
-            font-size: 30px;
-            text-align: center;
-
-        }
-
-        .loader {
-            border: 16px solid #f3f3f3;
-            /* Light grey */
-            border-top: 16px solid #3498db;
-
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-            display: flex;
-            justify-content: center;
-            margin-left: 40%;
-            margin-top: 10%;
-
-
-
-
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style> */
+          font-size: 20px;
+        } /* Decrease font size for readability */
+      }
+    </style>
     <script>
-        let coins = 100;
-        function startplay() {
-            document.getElementById("loader").style.display = "block";
-            setTimeout(() => {
-                startLottery();
-            }, 1000);
-        }
+      let coins = 100;
+      function startplay() {
+        document.getElementById("loader").style.display = "block";
+        setTimeout(() => {
+          startLottery();
+        }, 1000);
+      }
 
-        function startLottery() {
-            document.getElementById("loader").style.display = "none";
-            //  formula;   parseInt((Math.random() *100) / 10);
-            let output = parseInt((Math.random() * 100) / 10);
-            let betCoins = document.getElementById("coins").value;
-            let betNumber = document.getElementById("input").value;
-            if (betCoins <= 0 || betNumber < 0) {
-                document.getElementById("display-text").innerHTML =
-                    "<BR/>Your Coins is" + coins;
-                return;
-            }
-            if (betCoins > coins) {
-                document.getElementById("display-text").innerHTML = "invalid coins";
-                return;
-            }
-            if (betNumber == output) {
-                coins += betCoins * 9;
-                document.getElementById("display-text").style.backgroundImage = "url(https://media.istockphoto.com/id/1367581899/vector/lucky-winner-celebration-illustration-rich-violet-background-with-text-you-won-and-fireworks.jpg?s=612x612&w=0&k=20&c=KI_Gjvz4kWmPu5Op4Vin84oC16atYw-AFPcclhya_MA=)";
-            } else {
-                coins -= betCoins;
-            }
-            document.getElementById("display-text").innerHTML =
-                "Lottery Number = " + output + "<BR/>Your coins is" + coins;
-            document.getElementById("display-text").style.color = "#211C6A";
-            document.getElementById("display").style.backgroundImage = "url(https://media.istockphoto.com/id/607280134/vector/lottery-jackpot-poster.jpg?s=612x612&w=0&k=20&c=g2mvRIYFGkL2L5a7FrCXrA5oNAqhC5D2EjejbacMicY=)";
-            let audio = new Audio("");
-            audio.play();
-            audio.pause();
-
-
+      function startLottery() {
+        document.getElementById("loader").style.display = "none";
+        //  formula;   parseInt((Math.random() *100) / 10);
+        let output = parseInt((Math.random() * 100) / 10);
+        let betCoins = document.getElementById("coins").value;
+        let betNumber = document.getElementById("input").value;
+        if (betCoins <= 0 || betNumber < 0) {
+          document.getElementById("display-text").innerHTML =
+            "<BR/>Your Coins is" + coins;
+          return;
         }
-        function clearText() {
-            document.getElementById("display-text").innerHTML = "";
+        if (betCoins > coins) {
+          document.getElementById("display-text").innerHTML = "invalid coins";
+          return;
         }
-        window.onload = function () {
-            startplay();
+        if (betNumber == output) {
+          coins += betCoins * 9;
+          document.getElementById("display-text").style.backgroundImage =
+            "url(https://media.istockphoto.com/id/1367581899/vector/lucky-winner-celebration-illustration-rich-violet-background-with-text-you-won-and-fireworks.jpg?s=612x612&w=0&k=20&c=KI_Gjvz4kWmPu5Op4Vin84oC16atYw-AFPcclhya_MA=)";
+        } else {
+          coins -= betCoins;
         }
-
+        document.getElementById("display-text").innerHTML =
+          "Lottery Number = " + output + "<BR/>Your coins is" + coins;
+        document.getElementById("display-text").style.color = "#211C6A";
+        document.getElementById("display").style.backgroundImage =
+          "url(https://media.istockphoto.com/id/607280134/vector/lottery-jackpot-poster.jpg?s=612x612&w=0&k=20&c=g2mvRIYFGkL2L5a7FrCXrA5oNAqhC5D2EjejbacMicY=)";
+        let audio = new Audio("");
+        audio.play();
+        audio.pause();
+      }
+      function clearText() {
+        document.getElementById("display-text").innerHTML = "";
+      }
+      window.onload = function () {
+        startplay();
+      };
     </script>
+  </head>
 
-
-</head>
-
-<body
-    style="background-image: url(https://www.brsoftech.com/blog/wp-content/uploads/2018/07/Online-Lottery-Game-Development.jpg); background-repeat: no-repeat; background-size: cover;">
+  <body
+    style="
+      background-image: url(https://www.brsoftech.com/blog/wp-content/uploads/2018/07/Online-Lottery-Game-Development.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
     <!-- main -->
     <div class="main-container">
-        <!-- display -->
-        <div class="display" id="display">
-            <h1 class="display-text" id="display-text"></h1>
-            <div id="loader" class="loader"></div>
-        </div>
-        <!-- text box -->
-        <div class="input-box" id="input-box">
-            <!-- input number -->
-            <input id="input" type="number" placeholder="betno" class="input">
-            <input type="number" id="coins" placeholder="coin" class="input"><br><br>
-            <!-- button -->
-            <button class="buttons" onclick=" startplay()">CLICK ME</button>
-            <button class="buttons" onclick=" clearText()">CLEAR</button>
-        </div>
-
+      <!-- display -->
+      <div class="display" id="display">
+        <h1 class="display-text" id="display-text"></h1>
+        <div id="loader" class="loader"></div>
+      </div>
+      <!-- text box -->
+      <div class="input-box" id="input-box">
+        <!-- input number -->
+        <input id="input" type="number" placeholder="betno" class="input" />
+        <input
+          type="number"
+          id="coins"
+          placeholder="coin"
+          class="input"
+        /><br /><br />
+        <!-- button -->
+        <button class="buttons" onclick=" startplay()">CLICK ME</button>
+        <button class="buttons" onclick=" clearText()">CLEAR</button>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

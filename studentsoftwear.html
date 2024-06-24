@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Varela Round', sans-serif;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-around;
+        background-color: #bed7dc;
+        padding: 10px;
+      }
+
+      .start-button {
+        height: 60px;
+        width: 45%;
+        background-color: #379777;
+        color: black;
+        border: 3px solid black;
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      .container {
+        display: none;
+        padding: 20px;
+      }
+
+      form {
+        background-color: #45474B;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      label {
+        font-size: 20px;
+        color: black;
+        display: block;
+        margin: 10px 0 5px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+
+      .input-button input {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .input-button label {
+        display: inline;
+        font-size: 18px;
+      }
+
+      .input-button {
+        margin: 10px 0;
+      }
+
+      .form-button {
+        width: 30%;
+        height: 50px;
+        background-color:green;
+        color: white;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+         margin-left: 35%;
+         padding: 10px;
+      }
+
+      .heading {
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        .start-button {
+          font-size: 18px;
+          padding: 10px;
+        }
+
+        label,
+        input,
+        select,
+        textarea,
+        .form-button {
+          font-size: 14px;
+        }
+      }
+    </style>
+    <script>
+      let student = [];
+
+      // Show entry form
+      function entryFunction() {
+        document.getElementById("input").style.display = "block";
+        document.getElementById("entry").style.display = "none";
+      }
+
+      // Show student list
+      function listFunction() {
+        document.getElementById("input").style.display = "none";
+        document.getElementById("entry").style.display = "block";
+        showData();
+      }
+
+      // Add student data
+      function addData() {
+        let information = {
+          firstName: document.getElementById("first-name").value,
+          lastName: document.getElementById("last-name").value,
+          contactNo: document.getElementById("phone-no").value,
+          DOB: document.getElementById("birth-day").value,
+          email: document.getElementById("email-id").value,
+          education: document.getElementById("edu-cation").value,
+          address: document.getElementById("address-l").value,
+          rollNo: document.getElementById("roll").value,
+        };
+
+        student.push(information);
+        document.querySelector("form").reset();
+      }
+
+      // Display student data
+      function showData() {
+        let tableOutput = `
+          <table>
+            <thead>
+              <tr>
+                <th>Sr No</th>
+                <th>Roll No</th>
+                <th>Student Name</th>
+                <th>Contact No</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Education</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+        `;
+
+        for (let i = 0; i < student.length; i++) {
+          tableOutput += `
+            <tr>
+              <td>${i + 1}</td>
+              <td>${student[i].rollNo}</td>
+              <td>${student[i].firstName} ${student[i].lastName}</td>
+              <td>${student[i].contactNo}</td>
+              <td>${student[i].DOB}</td>
+              <td>${student[i].email}</td>
+              <td>${student[i].education}</td>
+              <td>${student[i].address}</td>
+            </tr>
+          `;
+        }
+
+        tableOutput += "</tbody></table>";
+        document.getElementById("show-info").innerHTML = tableOutput;
+      }
+
+      window.onload = function () {
+        entryFunction();
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header with buttons to toggle between entry form and list view -->
+    <div class="header">
+      <button class="start-button" onclick="entryFunction()">ENTRY FORM</button>
+      <button class="start-button" onclick="listFunction()">LIST</button>
+    </div>
+
+    <!-- Container for the entry form -->
+    <div id="input" class="container">
+      <form action="#" method="get">
+        <fieldset>
+          <h1 class="heading">ADMISSION FORM</h1>
+
+          <!-- First Name -->
+          <label for="first-name">FIRST NAME:</label>
+          <input type="text" id="first-name" name="fname" placeholder="ENTER YOUR FIRST NAME" />
+
+          <!-- Last Name -->
+          <label for="last-name">LAST NAME:</label>
+          <input type="text" id="last-name" name="lname" placeholder="ENTER YOUR LAST NAME" />
+
+          <!-- Gender -->
+          <label>GENDER:</label>
+          <div class="input-button">
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">MALE</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">FEMALE</label>
+          </div>
+
+          <!-- Education -->
+          <label for="edu-cation">EDUCATION:</label>
+          <select name="education" id="edu-cation">
+            <optgroup label="DEGREE">
+              <option value="BE">BE</option>
+              <option value="BSC">BSC</option>
+              <option value="MSA">MSA</option>
+              <option value="HSC">HSC</option>
+              <option value="SSC">SSC</option>
+            </optgroup>
+          </select>
+
+          <!-- Contact Number -->
+          <label for="phone-no">CONTACT NO.:</label>
+          <input type="number" id="phone-no" name="phone" />
+
+          <!-- Address -->
+          <label for="address-l">ADDRESS:</label>
+          <input type="text" id="address-l" name="address" />
+
+          <!-- Roll No. -->
+          <label for="roll">ROLL NO.:</label>
+          <input type="number" id="roll" name="roll" />
+
+          <!-- Email -->
+          <label for="email-id">EMAIL ID:</label>
+          <input type="email" id="email-id" name="email" placeholder="example@gmail.com" />
+
+          <!-- DOB -->
+          <label for="birth-day">DOB:</label>
+          <input type="date" id="birth-day" name="birth" />
+
+          <!-- Communication Skill -->
+          <label for="range">COMMUNICATION SKILL:</label>
+          <input type="range" id="range" name="range" />
+
+          <!-- Languages Known -->
+          <label>LANGUAGE KNOWN:</label>
+          <div class="input-button">
+            <input type="checkbox" id="HTML" name="language" value="HTML" />
+            <label for="HTML">HTML</label>
+            <input type="checkbox" id="CSS" name="language" value="CSS" />
+            <label for="CSS">CSS</label>
+            <input type="checkbox" id="PYTHON" name="language" value="PYTHON" />
+            <label for="PYTHON">PYTHON</label>
+            <input type="checkbox" id="RUBY" name="language" value="RUBY" />
+            <label for="RUBY">RUBY</label>
+          </div>
+
+          <!-- Tell something about yourself -->
+          <label for="message">TELL SOMETHING ABOUT YOURSELF:</label>
+          <textarea id="message" name="message" placeholder="TELL SOMETHING ABOUT YOURSELF"></textarea>
+
+          <!-- Buttons -->
+          
+          <button type="button" class="form-button" onclick="addData()">SUBMIT</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- Container for the list view -->
+    <div id="entry" class="container">
+      <h1>Student Data Information</h1>
+      <div id="show-info"></div>
+    </div>
+  </body>
+</html>

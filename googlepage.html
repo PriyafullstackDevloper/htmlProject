@@ -1,124 +1,52 @@
 
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Google Search</title>
-    <style>
-        /* CSS for styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-          
-        }
 
-        .container {
-            max-width: 500px;
-            margin: 30px auto;
-            /* Centering the container */
-            text-align: center;
-            display: grid;
-            justify-content: center;
-          
-            height: 100vh;
-          
-        }
-
-        h1 {
-            font-size: 40px;
-            font-family: 'Arial Black', sans-serif;
-            /* Google's font */
-            color: #1a0dab;
-            /* Google's font color */
-            margin-bottom: 30px;
-            /* Spacing below heading */
-        }
-
-        .search-input {
-            height: 40px;
-            width: 70%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #dfe1e5;
-            border-radius: 24px;
-            margin-bottom: 10px;
-            outline: none;
-            box-shadow: none;
-        }
-
-        .search-input::placeholder {
-            color: #80868b;
-        }
-
-        .search-button {
-            height: 40px;
-            padding: 0 16px;
-            font-size: 16px;
-            background-color: #1a73e8;
-            color: white;
-            border: none;
-            border-radius: 24px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .search-button:hover {
-            background-color: #0d6efd;
-        }
-
-        .display-container {
-            height: 60px;
-            width: 70%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #dfe1e5;
-            border-radius: 24px;
-            margin-top: 20px;
-            color: #70757a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+  <title>Search Page</title>
+  
+  <!--  CSS and Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./googlepage.css"> <!-- External CSS file -->
+  
+  <!-- JavaScript file -->
+  <script src="./googlepage.js"></script>
 </head>
 
 <body>
-    <div class="container">
-
-
-        <h1>Enjoy Programing Search</h1>
-
-        <form id="search-form" onsubmit="event.preventDefault(); searchInput();">
-            <input type="text" id="search-bar" class="search-input" placeholder="Search Google or type a URL">
-            <button type="submit" class="search-button">Students Search</button>
-
-            <div class="display-container" id="display"></div>
-        </form>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="" class="navtext">Gmail</a>
+    <a href="" class="navtext">Images</a>
+    <span class="material-icons apps">apps</span>
+    <img src="avatar3.png" alt="" class="avatar">
+  </nav>
+  
+  <!-- Main Content -->
+  <div class="main">
+    <div class="">
+      <img src="https://i2-prod.mirror.co.uk/incoming/article6363821.ece/ALTERNATES/s615b/Google-1998.jpg" style="height: 360px;"  alt="" class="google"> <!-- Google logo or image -->
     </div>
-
-    <script>
-        function searchInput() {
-            // Initialise
-            let searchValue = document.getElementById("search-bar").value;
-            let converted = searchValue.toLowerCase();
-            let inputs = ["priya", "nikita", "prachi", "shivansh", "pooja", "shubham", "ayush", "shardha"];
-            let output = false;
-
-            // Process
-            for (let i = 0; i < inputs.length; i++) {
-                if (inputs[i].toLowerCase() === converted.toLowerCase()) {
-                    output = true;
-                    document.getElementById("display").style.backgroundColor = "#90D26D";
-                }
-            }
-
-            // Output
-            if (output == true) {
-                document.getElementById("display").innerHTML = "Student is found";
-            } else {
-                document.getElementById("display").innerHTML = "Student is not found";
-            }
-        }
-    </script>
+    <br>
+    
+    <!-- Search Bar -->
+    <div class="searchb">
+      <input type="text" id="searchInput"> <!-- Input field for search query -->
+    <!-- Search Buttons -->
+    <div class="sbutton">
+      <button onclick="search()">Search</button> <!-- Button to trigger search function -->
+      <button onclick="feelingLucky()">I'm Feeling Lucky</button> <!-- Button for "I'm Feeling Lucky" feature -->
+      
+      <!-- Language Options -->
+      <h5>Google offered in : हिन्दी বাংলা తెలుగు मराठी /h5>
+      <br>
+      <br>
+      <!-- Results Display Area -->
+      <div id="results"></div> <!-- Placeholder for displaying search results -->
+    </div>
+  </div>
 </body>
 
 </html>
