@@ -11,38 +11,14 @@ body {
 
 
 
-/* navbar */
-/* * Base styles for navbar */ */
-.navbar {
-display: flex;; /* Changed from flex-end to space-between */
-padding: 20px;
+/* * Base styles for navbar */ 
+.header{
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    padding: 7px;
 }
 
-.navbar ul {
-list-style: none;
-display: flex;
-justify-content: flex-end; /* Center the links */
-align-items: flex-end; /* Align items vertically */
-width: 100%; /* Full width to utilize the space */
-margin: 0;
-padding: 0;
-}
-
-.navbar li {
-margin: 0 10px; /* Add some space between the links */
-}
-
-.navbar a {
-color: white;
-padding: 15px 20px;
-text-decoration: none;
-font-size: 22px;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: rgba(31 31 31);
-}
 
 .dropdown-content {
     position: absolute;
