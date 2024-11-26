@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Day Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .main-container {
+            width: 60vw;
+            height: auto;
+            background-color: gray;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: yellow;
+            color: black;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+
+        button {
+            width: 120px;
+            height: 50px;
+            background-color: green;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+    <script>
+        function showDay(buttonNumber) {
+            let text;
+            switch (buttonNumber) {
+                case 1:
+                    text = "Sunday";
+                    break;
+                case 2:
+                    text = "Monday";
+                    break;
+                case 3:
+                    text = "Tuesday";
+                    break;
+                case 4:
+                    text = "Wednesday";
+                    break;
+                case 5:
+                    text = "Thursday";
+                    break;
+                case 6:
+                    text = "Friday";
+                    break;
+                case 7:
+                    text = "Saturday";
+                    break;
+                default:
+                    text = "Invalid Input!";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header" id="result">Select a Day</div>
+        <div class="buttons-container">
+            <button onclick="showDay(1)">Button 1</button>
+            <button onclick="showDay(2)">Button 2</button>
+            <button onclick="showDay(3)">Button 3</button>
+            <button onclick="showDay(4)">Button 4</button>
+            <button onclick="showDay(5)">Button 5</button>
+            <button onclick="showDay(6)">Button 6</button>
+            <button onclick="showDay(7)">Button 7</button>
+            <button onclick="showDay(8)">Button 8</button>
+        </div>
+    </div>
+</body>
+
+</html>
