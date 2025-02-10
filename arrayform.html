@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="arrayfomstyle.css">
+    <!-- link import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+    <div class="main">
+
+        <div id="entry" class="entryform">
+            <!-- button -->
+           
+                <button class="button" onclick="entryFunction()">Entry</button>
+                <button class="button" onclick="listFunction()">List</button>
+      
+            <!-- form -->
+            <form class="form" id="form">
+                <fieldset class="text-style">
+
+                    <!-- h1 -->
+                    <h1>STUDENT DETAILS</h1>
+                    <!-- first section -->
+                    <label for="name" id="first-name">FIRST NAME;</label>
+                    <input type="text" id="input">
+                    <br>
+                    <br>
+                    <!-- second section -->
+                    <label for="lastname" id="last-name">LASTNAME;</label>
+                    <input type="text" id="input">
+                    <br>
+                    <br>
+                    <label for="gender" id="gender">Gender;</label>
+                    <input type="radio" name="gender" value="male" id="input"> Male
+                    <input type="radio" name="gender" value="female" id="input"> Female
+                    <br>
+                    <br>
+
+                    <!-- qualification -->
+                    <label for="education" id="education">EDUCATION;</label>
+
+
+                    <select>
+                        <option value="Course"></option>
+                        <option value="BCA">BSC</option>
+                        <option value="BBA">B-COM</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="MBA">MBA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="M.Tech">M.Tech</option>
+                    </select>
+                    </br>
+                    </br>
+
+                    <!-- contact -->
+                    <label for="contact number" id="contact-no">CONTACT NO;</label>
+                    <input type="number" value="0-10" id="input">
+                    </br>
+                    </br>
+                    <!-- DOB -->
+                    <label for="birth" id="dob">DATE OF BIRTH;</label>
+                    <input type="datetime-local" id="Test_DatetimeLocal">
+                    </br>
+                    </br>
+
+                    <!-- address -->
+                    <label for="address" id="address">ADDRESS;</label>
+                    <input type="text" id="input">
+                    </br>
+                    </br>
+                    <!-- roll no -->
+                    <label for="roll no" id="roll-No">ROLL NO;</label>
+                    <input type="number" id="input">
+                    <br>
+                    <br>
+                    <!-- email -->
+                    <label for="pemail" id="email">Email:</label>
+                    <input type="email" id="pemail">
+                    <br>
+                    <br>
+                    <!-- age -->
+                    <label for="age" id="age">Age</label>
+                    <input type="number" value="1-80">
+                    <label>
+                        <br>
+                        <br>
+
+                        <!-- about -->
+                        <label> Tell something About yourself: </label>
+                        <textarea id="about" class="textarea" placeholder="Tell yourself">
+</textarea>
+
+                        <!-- submit -->
+                        <button type="input" class="submit" onclick="inputData()" id="data">SUBMIT</button>
+                </fieldset>
+            </form>
+
+        </div>
+
+        <!-- 2nd page -->
+        <div id="list">
+            <button class="button" onclick="entryFunction()">Entry</button>
+            <button class="button" onclick="listFunction()">List</button>
+            <table id="addData" class="table">
+                <caption>STUDENT DATA</caption>
+                <thead>
+d                <tr>
+                    <th>Student Name</th>
+                    <th>Last Name</th>
+                    <th>Roll No</th>
+                    <th>Address</th>
+                    <th>Contact no</th>
+                    <th>DOB</th>
+                    <th>Education</th>
+                    <th>Gender</th>
+
+
+                </tr>
+            </thead>
+             
+            <!-- table body -->
+            <tbody id="create-tablerow">
+                <tr>
+
+                </tr>
+            </tbody>
+
+              
+
+        
+            </table>
+        </div>
+
+        <script src="arrayform.js">
+
+        </script>
+
+</body>
+
+</html>

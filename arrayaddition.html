@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-container {
+            height: 70vh;
+            width: 60vw;
+            background-color: #41C9E2;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5%;
+            margin-left: 20%;
+            margin-top: 2%;
+        }
+
+        .display-container {
+            height: 40%;
+            width: 100%;
+            background-color: gray;
+            border-radius: 5%;
+            font-size: 40px;
+            text-align: center;
+
+        }
+
+        .input-box {
+            height: 80%;
+            width: 100%;
+
+
+        }
+
+        .input {
+            height: 15%;
+            width: 90%;
+            margin-left: 5%;
+            font-size: 30px;
+
+        }
+
+        .button {
+            height: 20%;
+            width: 90%;
+            background-color: green;
+            margin-left: 5%;
+        }
+    </style>
+    <script>
+        function arrayadd() {
+            let input = [];
+            let total = 0;
+
+            for (i = 0; i < 5; i++) {
+                let numbers = Number(prompt("Enter a number"));
+                input.push(numbers);
+            }
+            let index = 0;
+            while (index < input.length) {
+                let output = "Array At" + index + "is" + input[index];
+                total += input[index];
+                // console.log(output);
+
+                index++;
+            }
+            console.log("the total is", total);
+        }
+       
+
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display-container" id="display"></div>
+        <div class="input-box">
+            <input class="input" type="number" id="input">
+            <button class="button" onclick="arrayadd()">CLICK HERE</button>
+        </div>
+    </div>
+</body>
+
+</html>

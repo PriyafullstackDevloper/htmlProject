@@ -1,0 +1,83 @@
+/* Resetting default margin and padding */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* styling for main box */
+.main {
+    background-color: aliceblue;
+    min-height: 100vh; /* Ensures the main box covers the viewport height */
+    width: 100%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* styling for 1st row */
+.firstrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* styling for 2nd box */
+.secondbox {
+    color: #2D9596;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* form project */
+.form-project, .youtube-page {
+    background-color: #9195F6;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border-style: groove;
+    border-color: black;
+    font-family: serif;
+}
+
+.youtube-page {
+    background-image: url(https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsb2ZmaWNlMThfZGlnaXRhbF9hYnN0cmFjdF9saW5lX2FydF9lbWl0dGVyX2JsdWVfbGlnaHRfZF9iZTYzZmU2Yi02YTc3LTRlMjctOGQ1Ni0xZWFiMGViOWU0MjFfMS5qcGc.jpg);
+    background-size: cover;
+}
+
+/* styling for 1st row */
+.firstbox {
+    background-color: white;
+    margin: 3% 5% 10%;
+    padding: 3%;
+    background-image: url(https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_1280.jpg);
+    background-size: cover;
+}
+
+/* styling for 2nd row */
+.secondrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-style: groove;
+    border-color: black;
+}
+
+/* styling for second row 3 column */
+.first-col, .second-col, .third-col {
+    font-family: serif;
+    background-color: #9195F6;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border-style: groove;
+    border-color: black;
+}
+
+.thirdbox {
+    background-color: pink;
+}
+
+/* styling for image */
+.images {
+    height: 90%;
+    width: 90%;
+    margin: 5% auto; /* Centering the image horizontally */
+}
