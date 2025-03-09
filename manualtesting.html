@@ -23,10 +23,39 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="manualtesting.css" />
+    
   </head>
 
   <body>
     <header>
+      <div class="main-container">
+          <nav class="top-bar">
+              <ul class="nav">
+                  <li><a href="#" class="nav-link active"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="./homepage/about.html" class="nav-link"><i class="fa fa-user"></i> About</a></li>
+                  <li>
+                      <!-- <a href="#" class="nav-link"><i class="fa fa-briefcase"></i> Projects</a> -->
+                      <div class="dropdown">
+                        <label for="project-category" style="color: white;" ><i class="fa fa-briefcase"></i> Select Project Category:</label>
+                        <ul class="dropdown-menu" style="color: black;">
+                            <li ><a href="./htmlcss.html" style="color: black;">HTML/CSS</a></li>
+                            <li><a href="./jsproject.html" style="color: black;">JavaScript</a></li>
+                            <li><a href="./manualtesting.html" style="color: black;">Manual Testing</a></li>
+                            <li><a href="./reactprojects.html" style="color: black;">React.js</a></li>
+                        </ul>
+                    </div>
+                  </li>
+              </ul>
+              <div class="menu-toggle" id="mobile-menu">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+              </div>
+          </nav>
+      </div>
+  </header>
+
+
       <!-- main container start -->
       <div class="main-container">
         <!-- aside start -->

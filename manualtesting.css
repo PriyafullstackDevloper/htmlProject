@@ -10,36 +10,132 @@ body {
   
   
   
-  /* * Base styles for navbar */ 
-  .header{
-    color: white;
-    font-size: 17px;
-    text-align: center;
-    padding: 7px;
+  /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #555;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ddd;
+}
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
   }
-  
-  
-  .dropdown-content {
-    position: absolute;
-    background-color: gray;
-    min-width: 180px; /* Increased min-width */
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    justify-content: flex-end;
+
+  .nav li {
+      margin: 0;
+      text-align: center;
   }
-  
-  .dropdown-content a {
-    color: #555;
-    padding: 14px 18px; /* Increased padding */
-    text-decoration: none;
-    display: block;
-    justify-content: flex-end;
+
+  .nav-link {
+      display: block;
+      padding: 15px;
   }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
+
+  .menu-toggle {
+      display: flex;
   }
-  
+
+  .menu-toggle.active + .nav {
+      display: flex;
+  }
+}
+
   /* grid-container */
   .project-section {
     display: grid;
